@@ -3,7 +3,7 @@ import os
 from cx_Freeze import setup, Executable
 
 # ADD FILES
-files = ['icon.ico','themes/']
+files = ['icon.ico', 'themes/']
 
 # TARGET
 target = Executable(
@@ -14,11 +14,13 @@ target = Executable(
 
 # SETUP CX FREEZE
 setup(
-    name = "PyDracula",
-    version = "1.0",
-    description = "Modern GUI for Python applications",
-    author = "Wanderson M. Pimenta",
-    options = {'build_exe' : {'include_files' : files}},
-    executables = [target]
-    
+    name="CalliduStocks",
+    version="1.0",
+    description="Trading App",
+    author="SirKarib",
+    options={'build_exe': {'include_files': files}},
+    executables=[target],
+    py_modules=[
+        'matplotlib', 'pandas', 'numpy', 'scipy', 'statsmodels', 'PySide6'
+    ]
 )
