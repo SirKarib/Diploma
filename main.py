@@ -1,11 +1,29 @@
-import sys
 import os
+import sys
 import platform
 
-# IMPORT / GUI AND MODULES AND WIDGETS
-# ///////////////////////////////////////////////////////////////
+from PySide6 import QtCore, QtGui, QtWidgets
+from PySide6.QtCore import Slot, Qt
+from PySide6.QtWidgets import (
+    QSlider,
+    QLabel,
+    QWidget,
+    QMainWindow,
+    QPushButton,
+    QVBoxLayout,
+    QApplication
+)
+
 from modules import *
 from widgets import *
+
+
+import pandas as pd
+import matplotlib
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
+from matplotlib.figure import Figure
+
+matplotlib.use('Qt5Agg')
 
 os.environ["QT_FONT_DPI"] = "96"  # FIX Problem for High DPI and Scale above 100%
 
@@ -14,9 +32,34 @@ os.environ["QT_FONT_DPI"] = "96"  # FIX Problem for High DPI and Scale above 100
 widgets = None
 
 
+class MplCanvas(FigureCanvasQTAgg):
+
+    def __init__(self, parent=None, width=5, height=4, dpi=100):
+        fig = Figure(figsize=(width, height), dpi=dpi)
+        self.axes = fig.add_subplot(111)
+        super(MplCanvas, self).__init__(fig)
+
+
 class MainWindow(QMainWindow):
-    def __init__(self):
-        QMainWindow.__init__(self)
+    def __init__(self, *args, **kwargs):
+        super(MainWindow, self).__init__(*args, **kwargs)
+        # QMainWindow.__init__(self)
+
+        # Create the matplotlib FigureCanvas object,
+        # which defines a single set of axes as self.axes.
+        # sc = MplCanvas(self, width=5, height=4, dpi=100)
+        # sc.axes.plot([0,1,2,3,4], [10,1,20,3,40])
+
+        # self.vertical_layout = QVBoxLayout()
+        #
+        # self.widget_matplotlib = QWidget()
+        # self.widget_matplotlib.set_layout(self.vertical_layout)
+
+        # Instead of calling .setCentralWidget(),
+        # we call it by its snake-case name...
+        # self.set_central_widget(self.widget_matplotlib)
+
+        # self.setCentralWidget(sc)
 
         # SET AS GLOBAL WIDGETS
         # ///////////////////////////////////////////////////////////////
@@ -24,6 +67,8 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         global widgets
         widgets = self.ui
+
+        # widget_matplotlib = self.ui.widget
 
         # USE CUSTOM TITLE BAR | USE AS "False" FOR MAC OR LINUX
         Settings.ENABLE_CUSTOM_TITLE_BAR = True
@@ -46,12 +91,18 @@ class MainWindow(QMainWindow):
         widgets.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
         # BUTTONS CLICK
-
+        ###################################################
         # LEFT MENUS
         widgets.btn_home.clicked.connect(self.buttonClick)
-        widgets.btn_widgets.clicked.connect(self.buttonClick)
-        widgets.btn_new.clicked.connect(self.buttonClick)
-        widgets.btn_save.clicked.connect(self.buttonClick)
+        widgets.btn_portfolio.clicked.connect(self.buttonClick)
+        widgets.btn_processing.clicked.connect(self.buttonClick)
+        widgets.btn_graphs.clicked.connect(self.buttonClick)
+        widgets.btn_recommended.clicked.connect(self.buttonClick)
+        widgets.btn_no_recommended.clicked.connect(self.buttonClick)
+        widgets.btn_recent.clicked.connect(self.buttonClick)
+
+        # SLIDER FOR CHANGING THEME
+        widgets.horizontalSlider_2.valueChanged.connect(self.changeTheme)
 
         # EXTRA LEFT BOX
         def openCloseLeftBox():
@@ -69,21 +120,24 @@ class MainWindow(QMainWindow):
         # SHOW APP
         self.show()
 
-        # SET CUSTOM THEME
-        useCustomTheme = False
-        themeFile = "themes\py_dracula_light.qss"
-
-        # SET THEME AND HACKS
-        if useCustomTheme:
-            # LOAD AND APPLY STYLE
-            UIFunctions.theme(self, themeFile, True)
-
-            # SET HACKS
-            AppFunctions.setThemeHack(self)
-
         # SET HOME PAGE AND SELECT MENU
         widgets.stackedWidget.setCurrentWidget(widgets.home)
         widgets.btn_home.setStyleSheet(UIFunctions.selectMenu(widgets.btn_home.styleSheet()))
+
+    def changeTheme(self, value):
+        """
+        Change theme mode realization.\n
+        :param value: Value of slider, 0 - Dark mode, 1 - Light mode
+        """
+
+        if value == 0:
+            select = "dark"
+        elif value == 1:
+            select = "light"
+
+        UIFunctions.theme(self, select)
+        # SET HACKS
+        AppFunctions.setThemeHack(self)
 
     # BUTTONS CLICK
     # Post here your functions for clicked buttons
@@ -98,19 +152,28 @@ class MainWindow(QMainWindow):
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
-        # SHOW WIDGETS PAGE
-        if btnName == "btn_widgets":
+        # SHOW PORTFOLIO PAGE
+        if btnName == "btn_portfolio":
             widgets.stackedWidget.setCurrentWidget(widgets.widgets)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
         # SHOW NEW PAGE
-        if btnName == "btn_new":
+        if btnName == "btn_processing":
             widgets.stackedWidget.setCurrentWidget(widgets.new_page)  # SET PAGE
             UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
-        if btnName == "btn_save":
+        if btnName == "btn_graphs":
+            print("Save BTN clicked!")
+
+        if btnName == "btn_recommended":
+            print("Save BTN clicked!")
+
+        if btnName == "btn_no_recommended":
+            print("Save BTN clicked!")
+
+        if btnName == "btn_recent":
             print("Save BTN clicked!")
 
         # PRINT BTN NAME
