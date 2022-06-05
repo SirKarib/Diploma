@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainzEnaiZ.ui'
+## Form generated from reading UI file 'mainMVUgGm.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -1048,14 +1048,14 @@ class Ui_MainWindow(object):
                                 "background-position: center;\n"
                                 "background-repeat: no-repeat;")
         self.stackedWidget.addWidget(self.home)
-        self.widgets = QWidget()
-        self.widgets.setObjectName(u"widgets")
-        self.widgets.setStyleSheet(u"b")
-        self.verticalLayout = QVBoxLayout(self.widgets)
+        self.portfolio = QWidget()
+        self.portfolio.setObjectName(u"portfolio")
+        self.portfolio.setStyleSheet(u"b")
+        self.verticalLayout = QVBoxLayout(self.portfolio)
         self.verticalLayout.setSpacing(10)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(10, 10, 10, 10)
-        self.row_1 = QFrame(self.widgets)
+        self.row_1 = QFrame(self.portfolio)
         self.row_1.setObjectName(u"row_1")
         self.row_1.setFrameShape(QFrame.StyledPanel)
         self.row_1.setFrameShadow(QFrame.Raised)
@@ -1138,7 +1138,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.row_1)
 
-        self.row_2 = QFrame(self.widgets)
+        self.row_2 = QFrame(self.portfolio)
         self.row_2.setObjectName(u"row_2")
         self.row_2.setMinimumSize(QSize(0, 150))
         self.row_2.setFrameShape(QFrame.StyledPanel)
@@ -1189,7 +1189,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 218, 218))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 353, 218))
         self.scrollAreaWidgetContents.setStyleSheet(u" QScrollBar:vertical {\n"
                                                     "	border: none;\n"
                                                     "    background: rgb(52, 59, 72);\n"
@@ -1256,7 +1256,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.row_2)
 
-        self.row_3 = QFrame(self.widgets)
+        self.row_3 = QFrame(self.portfolio)
         self.row_3.setObjectName(u"row_3")
         self.row_3.setMinimumSize(QSize(0, 150))
         self.row_3.setFrameShape(QFrame.StyledPanel)
@@ -1388,12 +1388,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.row_3)
 
-        self.stackedWidget.addWidget(self.widgets)
-        self.new_page = QWidget()
-        self.new_page.setObjectName(u"new_page")
-        self.verticalLayout_20 = QVBoxLayout(self.new_page)
+        self.stackedWidget.addWidget(self.portfolio)
+        self.processing = QWidget()
+        self.processing.setObjectName(u"processing")
+        self.verticalLayout_20 = QVBoxLayout(self.processing)
         self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.widget = QWidget(self.new_page)
+        self.widget = QWidget(self.processing)
         self.widget.setObjectName(u"widget")
         self.widget.setMaximumSize(QSize(16777215, 585))
         self.horizontalSlider_2 = QSlider(self.widget)
@@ -1415,7 +1415,26 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_20.addWidget(self.widget)
 
-        self.stackedWidget.addWidget(self.new_page)
+        self.stackedWidget.addWidget(self.processing)
+        self.graphs = QWidget()
+        self.graphs.setObjectName(u"graphs")
+        self.verticalLayout_21 = QVBoxLayout(self.graphs)
+        self.verticalLayout_21.setObjectName(u"verticalLayout_21")
+        self.label = QLabel(self.graphs)
+        self.label.setObjectName(u"label")
+
+        self.verticalLayout_21.addWidget(self.label)
+
+        self.stackedWidget.addWidget(self.graphs)
+        self.recommended = QWidget()
+        self.recommended.setObjectName(u"recommended")
+        self.stackedWidget.addWidget(self.recommended)
+        self.no_recommended = QWidget()
+        self.no_recommended.setObjectName(u"no_recommended")
+        self.stackedWidget.addWidget(self.no_recommended)
+        self.recent = QWidget()
+        self.recent.setObjectName(u"recent")
+        self.stackedWidget.addWidget(self.recent)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)
 
@@ -1556,7 +1575,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1680,6 +1699,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"Line", None));
         self.tableWidget.setSortingEnabled(__sortingEnabled)
 
+        self.label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))

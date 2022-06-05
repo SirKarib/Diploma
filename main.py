@@ -17,7 +17,6 @@ from PySide6.QtWidgets import (
 from modules import *
 from widgets import *
 
-
 import pandas as pd
 import matplotlib
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
@@ -148,33 +147,45 @@ class MainWindow(QMainWindow):
 
         # SHOW HOME PAGE
         if btnName == "btn_home":
-            widgets.stackedWidget.setCurrentWidget(widgets.home)
-            UIFunctions.resetStyle(self, btnName)
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
+            widgets.stackedWidget.setCurrentWidget(widgets.home)  # SET PAGE
+            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHER BUTTONS SELECTED
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
         # SHOW PORTFOLIO PAGE
         if btnName == "btn_portfolio":
-            widgets.stackedWidget.setCurrentWidget(widgets.widgets)
-            UIFunctions.resetStyle(self, btnName)
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
-
-        # SHOW NEW PAGE
-        if btnName == "btn_processing":
-            widgets.stackedWidget.setCurrentWidget(widgets.new_page)  # SET PAGE
-            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
+            widgets.stackedWidget.setCurrentWidget(widgets.portfolio)  # SET PAGE
+            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHER BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
+        # SHOW PROCESSING PAGE
+        if btnName == "btn_processing":
+            widgets.stackedWidget.setCurrentWidget(widgets.processing)  # SET PAGE
+            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHER BUTTONS SELECTED
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
+
+        # SHOW GRAPHS PAGE
         if btnName == "btn_graphs":
-            print("Save BTN clicked!")
+            widgets.stackedWidget.setCurrentWidget(widgets.graphs)  # SET PAGE
+            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHER BUTTONS SELECTED
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
+        # SHOW RECOMMENDED PAGE
         if btnName == "btn_recommended":
-            print("Save BTN clicked!")
+            widgets.stackedWidget.setCurrentWidget(widgets.recommended)  # SET PAGE
+            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHER BUTTONS SELECTED
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
+        # SHOW NO RECOMMENDED PAGE
         if btnName == "btn_no_recommended":
-            print("Save BTN clicked!")
+            widgets.stackedWidget.setCurrentWidget(widgets.no_recommended)  # SET PAGE
+            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHER BUTTONS SELECTED
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
+        # SHOW RECENT PAGE
         if btnName == "btn_recent":
-            print("Save BTN clicked!")
+            widgets.stackedWidget.setCurrentWidget(widgets.recent)  # SET PAGE
+            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHER BUTTONS SELECTED
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')

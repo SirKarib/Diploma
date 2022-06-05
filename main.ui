@@ -1882,7 +1882,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>2</number>
+                      <number>3</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="styleSheet">
@@ -1891,7 +1891,7 @@ background-position: center;
 background-repeat: no-repeat;</string>
                       </property>
                      </widget>
-                     <widget class="QWidget" name="widgets">
+                     <widget class="QWidget" name="portfolio">
                       <property name="styleSheet">
                        <string notr="true">b</string>
                       </property>
@@ -2184,7 +2184,7 @@ background-repeat: no-repeat;</string>
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>218</width>
+                                 <width>353</width>
                                  <height>218</height>
                                 </rect>
                                </property>
@@ -2726,7 +2726,7 @@ background-repeat: no-repeat;</string>
                        </item>
                       </layout>
                      </widget>
-                     <widget class="QWidget" name="new_page">
+                     <widget class="QWidget" name="processing">
                       <layout class="QVBoxLayout" name="verticalLayout_20">
                        <item>
                         <widget class="QWidget" name="widget" native="true">
@@ -2787,6 +2787,20 @@ background-repeat: no-repeat;</string>
                        </item>
                       </layout>
                      </widget>
+                     <widget class="QWidget" name="graphs">
+                      <layout class="QVBoxLayout" name="verticalLayout_21">
+                       <item>
+                        <widget class="QLabel" name="label">
+                         <property name="text">
+                          <string>TextLabel</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="recommended"/>
+                     <widget class="QWidget" name="no_recommended"/>
+                     <widget class="QWidget" name="recent"/>
                     </widget>
                    </item>
                   </layout>
