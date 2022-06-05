@@ -206,10 +206,14 @@ class UIFunctions(MainWindow):
 
     # IMPORT THEMES FILES QSS/CSS
     # ///////////////////////////////////////////////////////////////
-    def theme(self, file, useCustomTheme):
-        if useCustomTheme:
-            str = open(file, 'r').read()
-            self.ui.styleSheet.setStyleSheet(str)
+    def theme(self, select):
+        dark_theme = open("themes/py_dracula_light.qss", 'r').read()
+        light_theme = open("themes/py_dracula_light.qss", 'r').read()
+
+        if select == "dark":
+            self.ui.styleSheet.setStyleSheet(dark_theme)
+        elif select == "light":
+            self.ui.styleSheet.setStyleSheet(light_theme)
 
     # START - GUI DEFINITIONS
     # ///////////////////////////////////////////////////////////////
