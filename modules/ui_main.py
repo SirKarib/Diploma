@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainMVUgGm.ui'
+## Form generated from reading UI file 'mainMvZfFO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -607,6 +607,7 @@ class Ui_MainWindow(object):
 
         self.leftMenuFrame = QFrame(self.leftMenuBg)
         self.leftMenuFrame.setObjectName(u"leftMenuFrame")
+        self.leftMenuFrame.setMinimumSize(QSize(0, 0))
         self.leftMenuFrame.setFrameShape(QFrame.NoFrame)
         self.leftMenuFrame.setFrameShadow(QFrame.Raised)
         self.verticalMenuLayout = QVBoxLayout(self.leftMenuFrame)
@@ -692,7 +693,7 @@ class Ui_MainWindow(object):
         self.btn_graphs.setFont(font)
         self.btn_graphs.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_graphs.setLayoutDirection(Qt.LeftToRight)
-        self.btn_graphs.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-chart-line.png)")
+        self.btn_graphs.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-chart-line.png);")
 
         self.verticalLayout_8.addWidget(self.btn_graphs)
 
@@ -704,22 +705,28 @@ class Ui_MainWindow(object):
         self.btn_recommended.setFont(font)
         self.btn_recommended.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_recommended.setLayoutDirection(Qt.LeftToRight)
-        self.btn_recommended.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-thumb-up.png);")
+        self.btn_recommended.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-thumb-up.png)")
 
         self.verticalLayout_8.addWidget(self.btn_recommended)
 
         self.btn_no_recommended = QPushButton(self.topMenu)
         self.btn_no_recommended.setObjectName(u"btn_no_recommended")
+        sizePolicy.setHeightForWidth(self.btn_no_recommended.sizePolicy().hasHeightForWidth())
+        self.btn_no_recommended.setSizePolicy(sizePolicy)
         self.btn_no_recommended.setMinimumSize(QSize(0, 45))
         self.btn_no_recommended.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_no_recommended.setLayoutDirection(Qt.LeftToRight)
         self.btn_no_recommended.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-thumb-down.png)")
 
         self.verticalLayout_8.addWidget(self.btn_no_recommended)
 
         self.btn_recent = QPushButton(self.topMenu)
         self.btn_recent.setObjectName(u"btn_recent")
+        sizePolicy.setHeightForWidth(self.btn_recent.sizePolicy().hasHeightForWidth())
+        self.btn_recent.setSizePolicy(sizePolicy)
         self.btn_recent.setMinimumSize(QSize(0, 45))
         self.btn_recent.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_recent.setLayoutDirection(Qt.LeftToRight)
         self.btn_recent.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-history.png)")
 
         self.verticalLayout_8.addWidget(self.btn_recent)
@@ -1189,7 +1196,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 353, 218))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 218, 218))
         self.scrollAreaWidgetContents.setStyleSheet(u" QScrollBar:vertical {\n"
                                                     "	border: none;\n"
                                                     "    background: rgb(52, 59, 72);\n"
@@ -1589,8 +1596,8 @@ class Ui_MainWindow(object):
         self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.btn_portfolio.setText(QCoreApplication.translate("MainWindow", u"Portfolio", None))
         self.btn_processing.setText(QCoreApplication.translate("MainWindow", u"Processing", None))
-        self.btn_graphs.setText(QCoreApplication.translate("MainWindow", u"Graphs", None))
-        self.btn_recommended.setText(QCoreApplication.translate("MainWindow", u"Recommended", None))
+        self.btn_graphs.setText(QCoreApplication.translate("MainWindow", u"Recommended", None))
+        self.btn_recommended.setText(QCoreApplication.translate("MainWindow", u"Graphs", None))
         self.btn_no_recommended.setText(QCoreApplication.translate("MainWindow", u"Not recommended", None))
         self.btn_recent.setText(QCoreApplication.translate("MainWindow", u"Recent", None))
         self.toggleLeftBox.setText(QCoreApplication.translate("MainWindow", u"Left Box", None))
