@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainMvZfFO.ui'
+## Form generated from reading UI file 'mainLMUNoQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -938,13 +938,32 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.titleRightInfo = QLabel(self.leftBox)
-        self.titleRightInfo.setObjectName(u"titleRightInfo")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        self.horizontalSlider_2 = QSlider(self.leftBox)
+        self.horizontalSlider_2.setObjectName(u"horizontalSlider_2")
+        sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy2.setHorizontalStretch(0)
         sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.titleRightInfo.sizePolicy().hasHeightForWidth())
-        self.titleRightInfo.setSizePolicy(sizePolicy2)
+        sizePolicy2.setHeightForWidth(self.horizontalSlider_2.sizePolicy().hasHeightForWidth())
+        self.horizontalSlider_2.setSizePolicy(sizePolicy2)
+        self.horizontalSlider_2.setMinimumSize(QSize(25, 35))
+        self.horizontalSlider_2.setMaximumSize(QSize(25, 16777215))
+        self.horizontalSlider_2.setFont(font)
+        self.horizontalSlider_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.horizontalSlider_2.setMaximum(1)
+        self.horizontalSlider_2.setPageStep(2)
+        self.horizontalSlider_2.setValue(0)
+        self.horizontalSlider_2.setSliderPosition(0)
+        self.horizontalSlider_2.setOrientation(Qt.Horizontal)
+
+        self.horizontalLayout_3.addWidget(self.horizontalSlider_2)
+
+        self.titleRightInfo = QLabel(self.leftBox)
+        self.titleRightInfo.setObjectName(u"titleRightInfo")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.titleRightInfo.sizePolicy().hasHeightForWidth())
+        self.titleRightInfo.setSizePolicy(sizePolicy3)
         self.titleRightInfo.setMaximumSize(QSize(16777215, 45))
         self.titleRightInfo.setFont(font)
         self.titleRightInfo.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -1196,7 +1215,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 218, 218))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 353, 218))
         self.scrollAreaWidgetContents.setStyleSheet(u" QScrollBar:vertical {\n"
                                                     "	border: none;\n"
                                                     "    background: rgb(52, 59, 72);\n"
@@ -1328,11 +1347,11 @@ class Ui_MainWindow(object):
         __qtablewidgetitem23 = QTableWidgetItem()
         self.tableWidget.setItem(0, 3, __qtablewidgetitem23)
         self.tableWidget.setObjectName(u"tableWidget")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
-        self.tableWidget.setSizePolicy(sizePolicy3)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
+        self.tableWidget.setSizePolicy(sizePolicy4)
         palette = QPalette()
         brush = QBrush(QColor(221, 221, 221, 255))
         brush.setStyle(Qt.SolidPattern)
@@ -1403,22 +1422,6 @@ class Ui_MainWindow(object):
         self.widget = QWidget(self.processing)
         self.widget.setObjectName(u"widget")
         self.widget.setMaximumSize(QSize(16777215, 585))
-        self.horizontalSlider_2 = QSlider(self.widget)
-        self.horizontalSlider_2.setObjectName(u"horizontalSlider_2")
-        self.horizontalSlider_2.setGeometry(QRect(120, 330, 25, 35))
-        sizePolicy4 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.horizontalSlider_2.sizePolicy().hasHeightForWidth())
-        self.horizontalSlider_2.setSizePolicy(sizePolicy4)
-        self.horizontalSlider_2.setMinimumSize(QSize(25, 35))
-        self.horizontalSlider_2.setFont(font)
-        self.horizontalSlider_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.horizontalSlider_2.setMaximum(1)
-        self.horizontalSlider_2.setPageStep(2)
-        self.horizontalSlider_2.setValue(0)
-        self.horizontalSlider_2.setSliderPosition(0)
-        self.horizontalSlider_2.setOrientation(Qt.Horizontal)
 
         self.verticalLayout_20.addWidget(self.widget)
 
@@ -1582,7 +1585,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
