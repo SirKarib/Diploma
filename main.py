@@ -87,6 +87,7 @@ class MainWindow(QMainWindow):
         UIFunctions.uiDefinitions(self)
 
         # QTableWidget PARAMETERS
+        # widgets.tableWidget.horizontalHeader().setStretchLastSection(True)
         widgets.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
         # BUTTONS CLICK
@@ -135,6 +136,15 @@ class MainWindow(QMainWindow):
         elif value == 1:
             UIFunctions.theme(self, "light")
             AppFunctions.setLightThemeHack(self)  # SET HACKS
+
+    @staticmethod
+    def load_data():
+        quotes = [
+            {"ticker": "AAPL", "currency": "USD", "period": 300},
+            {"ticker": "MCD", "currency": "USD", "period": 300}
+        ]
+
+        widgets.tableWidget.setItem(2, 0, QTableWidgetItem("Ticker"))
 
     # BUTTONS CLICK
     # Post here your functions for clicked buttons
@@ -202,6 +212,7 @@ class MainWindow(QMainWindow):
         if event.buttons() == Qt.LeftButton:
             print('Mouse click: LEFT CLICK')
         if event.buttons() == Qt.RightButton:
+            self.load_data()
             print('Mouse click: RIGHT CLICK')
 
 
