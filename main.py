@@ -130,13 +130,11 @@ class MainWindow(QMainWindow):
         """
 
         if value == 0:
-            select = "dark"
+            UIFunctions.theme(self, "dark")
+            AppFunctions.setDarkThemeHack(self)  # SET HACKS
         elif value == 1:
-            select = "light"
-
-        UIFunctions.theme(self, select)
-        # SET HACKS
-        AppFunctions.setThemeHack(self)
+            UIFunctions.theme(self, "light")
+            AppFunctions.setLightThemeHack(self)  # SET HACKS
 
     # BUTTONS CLICK
     # Post here your functions for clicked buttons
