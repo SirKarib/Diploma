@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainzVEHeR.ui'
+## Form generated from reading UI file 'mainletnlO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -18,8 +18,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1266, 720)
-        MainWindow.setMinimumSize(QSize(940, 560))
+        MainWindow.resize(1200, 680)
+        MainWindow.setMinimumSize(QSize(800, 680))
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
         font = QFont()
@@ -1061,6 +1061,12 @@ class Ui_MainWindow(object):
         self.verticalLayout.setContentsMargins(10, 10, 10, 10)
         self.frame_portfolio = QFrame(self.portfolio)
         self.frame_portfolio.setObjectName(u"frame_portfolio")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.frame_portfolio.sizePolicy().hasHeightForWidth())
+        self.frame_portfolio.setSizePolicy(sizePolicy4)
+        self.frame_portfolio.setMinimumSize(QSize(0, 550))
         self.frame_portfolio.setFrameShape(QFrame.StyledPanel)
         self.frame_portfolio.setFrameShadow(QFrame.Raised)
         self.verticalLayout_16 = QVBoxLayout(self.frame_portfolio)
@@ -1069,11 +1075,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
         self.frame_div_import_file = QFrame(self.frame_portfolio)
         self.frame_div_import_file.setObjectName(u"frame_div_import_file")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.frame_div_import_file.sizePolicy().hasHeightForWidth())
-        self.frame_div_import_file.setSizePolicy(sizePolicy4)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.frame_div_import_file.sizePolicy().hasHeightForWidth())
+        self.frame_div_import_file.setSizePolicy(sizePolicy5)
         self.frame_div_import_file.setMinimumSize(QSize(0, 110))
         self.frame_div_import_file.setMaximumSize(QSize(16777215, 110))
         self.frame_div_import_file.setFrameShape(QFrame.NoFrame)
@@ -1088,7 +1094,9 @@ class Ui_MainWindow(object):
         self.frame_title_importFile.setFrameShape(QFrame.StyledPanel)
         self.frame_title_importFile.setFrameShadow(QFrame.Raised)
         self.verticalLayout_18 = QVBoxLayout(self.frame_title_importFile)
+        self.verticalLayout_18.setSpacing(0)
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
+        self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
         self.importFileLabel = QLabel(self.frame_title_importFile)
         self.importFileLabel.setObjectName(u"importFileLabel")
         self.importFileLabel.setFont(font)
@@ -1105,28 +1113,10 @@ class Ui_MainWindow(object):
         self.frame_import_file.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_9 = QHBoxLayout(self.frame_import_file)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
+        self.horizontalLayout_9.setContentsMargins(0, -1, -1, -1)
         self.importFileLayout = QGridLayout()
         self.importFileLayout.setObjectName(u"importFileLayout")
         self.importFileLayout.setContentsMargins(-1, -1, -1, 0)
-        self.filePathLineEdit = QLineEdit(self.frame_import_file)
-        self.filePathLineEdit.setObjectName(u"filePathLineEdit")
-        self.filePathLineEdit.setMinimumSize(QSize(0, 30))
-        self.filePathLineEdit.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-
-        self.importFileLayout.addWidget(self.filePathLineEdit, 0, 0, 1, 1)
-
-        self.tickersFileButton = QPushButton(self.frame_import_file)
-        self.tickersFileButton.setObjectName(u"tickersFileButton")
-        self.tickersFileButton.setMinimumSize(QSize(150, 30))
-        self.tickersFileButton.setFont(font)
-        self.tickersFileButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.tickersFileButton.setStyleSheet(u"background-color: rgb(52, 59, 72);")
-        icon4 = QIcon()
-        icon4.addFile(u":/icons/images/icons/cil-folder-open.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.tickersFileButton.setIcon(icon4)
-
-        self.importFileLayout.addWidget(self.tickersFileButton, 0, 1, 1, 1)
-
         self.importFileDescriptionLabel = QLabel(self.frame_import_file)
         self.importFileDescriptionLabel.setObjectName(u"importFileDescriptionLabel")
         self.importFileDescriptionLabel.setStyleSheet(u"color: rgb(113, 126, 149);")
@@ -1134,6 +1124,25 @@ class Ui_MainWindow(object):
         self.importFileDescriptionLabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.importFileLayout.addWidget(self.importFileDescriptionLabel, 1, 0, 1, 2)
+
+        self.filePathLineEdit = QLineEdit(self.frame_import_file)
+        self.filePathLineEdit.setObjectName(u"filePathLineEdit")
+        self.filePathLineEdit.setMinimumSize(QSize(0, 30))
+        self.filePathLineEdit.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.importFileLayout.addWidget(self.filePathLineEdit, 0, 0, 1, 1)
+
+        self.importTickersFileButton = QPushButton(self.frame_import_file)
+        self.importTickersFileButton.setObjectName(u"importTickersFileButton")
+        self.importTickersFileButton.setMinimumSize(QSize(150, 30))
+        self.importTickersFileButton.setFont(font)
+        self.importTickersFileButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.importTickersFileButton.setStyleSheet(u"background-color: rgb(52, 59, 72);")
+        icon4 = QIcon()
+        icon4.addFile(u":/icons/images/icons/cil-folder-open.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.importTickersFileButton.setIcon(icon4)
+
+        self.importFileLayout.addWidget(self.importTickersFileButton, 0, 1, 1, 1)
 
 
         self.horizontalLayout_9.addLayout(self.importFileLayout)
@@ -1144,50 +1153,78 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_16.addWidget(self.frame_div_import_file, 0, Qt.AlignTop)
 
-        self.horizontalFrame_2 = QFrame(self.frame_portfolio)
-        self.horizontalFrame_2.setObjectName(u"horizontalFrame_2")
-        sizePolicy4.setHeightForWidth(self.horizontalFrame_2.sizePolicy().hasHeightForWidth())
-        self.horizontalFrame_2.setSizePolicy(sizePolicy4)
-        self.horizontalFrame_2.setMinimumSize(QSize(0, 50))
-        self.horizontalFrame_2.setMaximumSize(QSize(16777215, 50))
-        self.horizontalLayout_11 = QHBoxLayout(self.horizontalFrame_2)
-        self.horizontalLayout_11.setSpacing(22)
+        self.frame_div_buttons_load_start = QFrame(self.frame_portfolio)
+        self.frame_div_buttons_load_start.setObjectName(u"frame_div_buttons_load_start")
+        sizePolicy5.setHeightForWidth(self.frame_div_buttons_load_start.sizePolicy().hasHeightForWidth())
+        self.frame_div_buttons_load_start.setSizePolicy(sizePolicy5)
+        self.frame_div_buttons_load_start.setMinimumSize(QSize(0, 50))
+        self.frame_div_buttons_load_start.setMaximumSize(QSize(16777215, 50))
+        self.horizontalLayout_11 = QHBoxLayout(self.frame_div_buttons_load_start)
+        self.horizontalLayout_11.setSpacing(20)
         self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
-        self.pushButton_2 = QPushButton(self.horizontalFrame_2)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setMinimumSize(QSize(150, 0))
-        self.pushButton_2.setMaximumSize(QSize(150, 16777215))
+        self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
+        self.loadTickersFromFileButton = QPushButton(self.frame_div_buttons_load_start)
+        self.loadTickersFromFileButton.setObjectName(u"loadTickersFromFileButton")
+        self.loadTickersFromFileButton.setMinimumSize(QSize(180, 40))
+        self.loadTickersFromFileButton.setMaximumSize(QSize(150, 16777215))
+        self.loadTickersFromFileButton.setCursor(QCursor(Qt.PointingHandCursor))
+        icon5 = QIcon()
+        icon5.addFile(u":/icons/images/icons/cil-library.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.loadTickersFromFileButton.setIcon(icon5)
 
-        self.horizontalLayout_11.addWidget(self.pushButton_2)
+        self.horizontalLayout_11.addWidget(self.loadTickersFromFileButton, 0, Qt.AlignVCenter)
 
-        self.pushButton = QPushButton(self.horizontalFrame_2)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(150, 0))
-        self.pushButton.setMaximumSize(QSize(150, 16777215))
+        self.getDataTickersButton = QPushButton(self.frame_div_buttons_load_start)
+        self.getDataTickersButton.setObjectName(u"getDataTickersButton")
+        self.getDataTickersButton.setMinimumSize(QSize(180, 40))
+        self.getDataTickersButton.setMaximumSize(QSize(150, 16777215))
+        self.getDataTickersButton.setCursor(QCursor(Qt.PointingHandCursor))
+        icon6 = QIcon()
+        icon6.addFile(u":/icons/images/icons/cil-cloud-download.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.getDataTickersButton.setIcon(icon6)
 
-        self.horizontalLayout_11.addWidget(self.pushButton)
+        self.horizontalLayout_11.addWidget(self.getDataTickersButton)
 
 
-        self.verticalLayout_16.addWidget(self.horizontalFrame_2, 0, Qt.AlignTop)
+        self.verticalLayout_16.addWidget(self.frame_div_buttons_load_start, 0, Qt.AlignVCenter)
 
-        self.horizontalFrame = QFrame(self.frame_portfolio)
-        self.horizontalFrame.setObjectName(u"horizontalFrame")
-        sizePolicy3.setHeightForWidth(self.horizontalFrame.sizePolicy().hasHeightForWidth())
-        self.horizontalFrame.setSizePolicy(sizePolicy3)
-        self.horizontalFrame.setMinimumSize(QSize(0, 350))
-        self.importAndSelectTickersHorizontalLayout = QHBoxLayout(self.horizontalFrame)
+        self.frame_div_select_tickers = QFrame(self.frame_portfolio)
+        self.frame_div_select_tickers.setObjectName(u"frame_div_select_tickers")
+        sizePolicy3.setHeightForWidth(self.frame_div_select_tickers.sizePolicy().hasHeightForWidth())
+        self.frame_div_select_tickers.setSizePolicy(sizePolicy3)
+        self.frame_div_select_tickers.setMinimumSize(QSize(0, 200))
+        self.frame_div_select_tickers.setSizeIncrement(QSize(0, 0))
+        self.frame_div_select_tickers.setBaseSize(QSize(0, 0))
+        self.importAndSelectTickersHorizontalLayout = QHBoxLayout(self.frame_div_select_tickers)
         self.importAndSelectTickersHorizontalLayout.setObjectName(u"importAndSelectTickersHorizontalLayout")
-        self.importedTickersListWidget = QListWidget(self.horizontalFrame)
+        self.importAndSelectTickersHorizontalLayout.setContentsMargins(0, 10, 0, 20)
+        self.importedTickersListLayout = QVBoxLayout()
+        self.importedTickersListLayout.setObjectName(u"importedTickersListLayout")
+        self.importedTickersListLayout.setContentsMargins(-1, 0, -1, 0)
+        self.importedTickersListWidget = QListWidget(self.frame_div_select_tickers)
         self.importedTickersListWidget.setObjectName(u"importedTickersListWidget")
-        self.importedTickersListWidget.setMinimumSize(QSize(0, 350))
+        sizePolicy6 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.importedTickersListWidget.sizePolicy().hasHeightForWidth())
+        self.importedTickersListWidget.setSizePolicy(sizePolicy6)
+        self.importedTickersListWidget.setMinimumSize(QSize(0, 80))
+        self.importedTickersListWidget.setSizeIncrement(QSize(0, 0))
+        self.importedTickersListWidget.setBaseSize(QSize(0, 0))
+        self.importedTickersListWidget.setSizeAdjustPolicy(QAbstractScrollArea.AdjustIgnored)
+        self.importedTickersListWidget.setMovement(QListView.Static)
+        self.importedTickersListWidget.setResizeMode(QListView.Fixed)
 
-        self.importAndSelectTickersHorizontalLayout.addWidget(self.importedTickersListWidget)
+        self.importedTickersListLayout.addWidget(self.importedTickersListWidget)
+
+
+        self.importAndSelectTickersHorizontalLayout.addLayout(self.importedTickersListLayout)
 
         self.buttonsForSelectVerticalLayout = QVBoxLayout()
-        self.buttonsForSelectVerticalLayout.setSpacing(1)
+        self.buttonsForSelectVerticalLayout.setSpacing(80)
         self.buttonsForSelectVerticalLayout.setObjectName(u"buttonsForSelectVerticalLayout")
-        self.buttonsForSelectVerticalLayout.setContentsMargins(20, 0, 20, 0)
-        self.trackButton = QPushButton(self.horizontalFrame)
+        self.buttonsForSelectVerticalLayout.setContentsMargins(20, 10, 20, 250)
+        self.trackButton = QPushButton(self.frame_div_select_tickers)
         self.trackButton.setObjectName(u"trackButton")
         sizePolicy2.setHeightForWidth(self.trackButton.sizePolicy().hasHeightForWidth())
         self.trackButton.setSizePolicy(sizePolicy2)
@@ -1199,7 +1236,7 @@ class Ui_MainWindow(object):
 
         self.buttonsForSelectVerticalLayout.addWidget(self.trackButton, 0, Qt.AlignHCenter)
 
-        self.untrackButton = QPushButton(self.horizontalFrame)
+        self.untrackButton = QPushButton(self.frame_div_select_tickers)
         self.untrackButton.setObjectName(u"untrackButton")
         sizePolicy2.setHeightForWidth(self.untrackButton.sizePolicy().hasHeightForWidth())
         self.untrackButton.setSizePolicy(sizePolicy2)
@@ -1211,7 +1248,7 @@ class Ui_MainWindow(object):
 
         self.buttonsForSelectVerticalLayout.addWidget(self.untrackButton, 0, Qt.AlignHCenter)
 
-        self.trackAllButton = QPushButton(self.horizontalFrame)
+        self.trackAllButton = QPushButton(self.frame_div_select_tickers)
         self.trackAllButton.setObjectName(u"trackAllButton")
         sizePolicy2.setHeightForWidth(self.trackAllButton.sizePolicy().hasHeightForWidth())
         self.trackAllButton.setSizePolicy(sizePolicy2)
@@ -1223,7 +1260,7 @@ class Ui_MainWindow(object):
 
         self.buttonsForSelectVerticalLayout.addWidget(self.trackAllButton, 0, Qt.AlignHCenter)
 
-        self.untrackAllButton = QPushButton(self.horizontalFrame)
+        self.untrackAllButton = QPushButton(self.frame_div_select_tickers)
         self.untrackAllButton.setObjectName(u"untrackAllButton")
         sizePolicy2.setHeightForWidth(self.untrackAllButton.sizePolicy().hasHeightForWidth())
         self.untrackAllButton.setSizePolicy(sizePolicy2)
@@ -1238,14 +1275,37 @@ class Ui_MainWindow(object):
 
         self.importAndSelectTickersHorizontalLayout.addLayout(self.buttonsForSelectVerticalLayout)
 
-        self.selectedTickersListWidget = QListWidget(self.horizontalFrame)
+        self.selectedTickersListLayout = QVBoxLayout()
+        self.selectedTickersListLayout.setObjectName(u"selectedTickersListLayout")
+        self.selectedTickersListLayout.setContentsMargins(-1, 0, -1, 0)
+        self.selectedTickersListWidget = QListWidget(self.frame_div_select_tickers)
         self.selectedTickersListWidget.setObjectName(u"selectedTickersListWidget")
-        self.selectedTickersListWidget.setMinimumSize(QSize(0, 350))
+        sizePolicy6.setHeightForWidth(self.selectedTickersListWidget.sizePolicy().hasHeightForWidth())
+        self.selectedTickersListWidget.setSizePolicy(sizePolicy6)
+        self.selectedTickersListWidget.setMinimumSize(QSize(0, 80))
+        self.selectedTickersListWidget.setSizeIncrement(QSize(0, 0))
+        self.selectedTickersListWidget.setBaseSize(QSize(0, 0))
+        self.selectedTickersListWidget.setResizeMode(QListView.Fixed)
 
-        self.importAndSelectTickersHorizontalLayout.addWidget(self.selectedTickersListWidget)
+        self.selectedTickersListLayout.addWidget(self.selectedTickersListWidget)
 
 
-        self.verticalLayout_16.addWidget(self.horizontalFrame, 0, Qt.AlignTop)
+        self.importAndSelectTickersHorizontalLayout.addLayout(self.selectedTickersListLayout)
+
+
+        self.verticalLayout_16.addWidget(self.frame_div_select_tickers)
+
+        self.portfolioPageProgressBarLayout = QVBoxLayout()
+        self.portfolioPageProgressBarLayout.setObjectName(u"portfolioPageProgressBarLayout")
+        self.portfolioPageProgressBarLayout.setContentsMargins(0, 0, -1, 0)
+        self.portfolioPageProgressBar = QProgressBar(self.frame_portfolio)
+        self.portfolioPageProgressBar.setObjectName(u"portfolioPageProgressBar")
+        self.portfolioPageProgressBar.setValue(24)
+
+        self.portfolioPageProgressBarLayout.addWidget(self.portfolioPageProgressBar)
+
+
+        self.verticalLayout_16.addLayout(self.portfolioPageProgressBarLayout)
 
 
         self.verticalLayout.addWidget(self.frame_portfolio, 0, Qt.AlignTop)
@@ -1360,9 +1420,9 @@ class Ui_MainWindow(object):
         self.commandLinkButton_2.setObjectName(u"commandLinkButton_2")
         self.commandLinkButton_2.setCursor(QCursor(Qt.PointingHandCursor))
         self.commandLinkButton_2.setStyleSheet(u"")
-        icon5 = QIcon()
-        icon5.addFile(u":/icons/images/icons/cil-link.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.commandLinkButton_2.setIcon(icon5)
+        icon7 = QIcon()
+        icon7.addFile(u":/icons/images/icons/cil-link.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.commandLinkButton_2.setIcon(icon7)
 
         self.gridLayout_3.addWidget(self.commandLinkButton_2, 1, 6, 1, 1)
 
@@ -1444,11 +1504,8 @@ class Ui_MainWindow(object):
         __qtablewidgetitem23 = QTableWidgetItem()
         self.tableWidget.setItem(0, 3, __qtablewidgetitem23)
         self.tableWidget.setObjectName(u"tableWidget")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
-        self.tableWidget.setSizePolicy(sizePolicy5)
+        sizePolicy6.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
+        self.tableWidget.setSizePolicy(sizePolicy6)
         palette = QPalette()
         brush = QBrush(QColor(221, 221, 221, 255))
         brush.setStyle(Qt.SolidPattern)
@@ -1725,12 +1782,12 @@ class Ui_MainWindow(object):
         #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
         self.importFileLabel.setText(QCoreApplication.translate("MainWindow", u"IMPORT FILE WITH TICKERS", None))
+        self.importFileDescriptionLabel.setText(QCoreApplication.translate("MainWindow", u"Support .txt, .csv, .xclsx", None))
         self.filePathLineEdit.setText("")
         self.filePathLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
-        self.tickersFileButton.setText(QCoreApplication.translate("MainWindow", u"Open", None))
-        self.importFileDescriptionLabel.setText(QCoreApplication.translate("MainWindow", u"Support .txt, .csv, .xclsx", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.importTickersFileButton.setText(QCoreApplication.translate("MainWindow", u"Open", None))
+        self.loadTickersFromFileButton.setText(QCoreApplication.translate("MainWindow", u"Load Tickers", None))
+        self.getDataTickersButton.setText(QCoreApplication.translate("MainWindow", u"Get Quotes Data", None))
         self.trackButton.setText("")
         self.untrackButton.setText("")
         self.trackAllButton.setText("")

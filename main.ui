@@ -7,14 +7,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1266</width>
-    <height>720</height>
+    <width>1200</width>
+    <height>680</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>940</width>
-    <height>560</height>
+    <width>800</width>
+    <height>680</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -1928,6 +1928,18 @@ background-repeat: no-repeat;</string>
                        </property>
                        <item alignment="Qt::AlignTop">
                         <widget class="QFrame" name="frame_portfolio">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>550</height>
+                          </size>
+                         </property>
                          <property name="frameShape">
                           <enum>QFrame::StyledPanel</enum>
                          </property>
@@ -2007,6 +2019,21 @@ background-repeat: no-repeat;</string>
                                 <enum>QFrame::Raised</enum>
                                </property>
                                <layout class="QVBoxLayout" name="verticalLayout_18">
+                                <property name="spacing">
+                                 <number>0</number>
+                                </property>
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="topMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
                                 <item>
                                  <widget class="QLabel" name="importFileLabel">
                                   <property name="font">
@@ -2036,11 +2063,30 @@ background-repeat: no-repeat;</string>
                                 <enum>QFrame::Raised</enum>
                                </property>
                                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
                                 <item>
                                  <layout class="QGridLayout" name="importFileLayout">
                                   <property name="bottomMargin">
                                    <number>0</number>
                                   </property>
+                                  <item row="1" column="0" colspan="2">
+                                   <widget class="QLabel" name="importFileDescriptionLabel">
+                                    <property name="styleSheet">
+                                     <string notr="true">color: rgb(113, 126, 149);</string>
+                                    </property>
+                                    <property name="lineWidth">
+                                     <number>1</number>
+                                    </property>
+                                    <property name="text">
+                                     <string>Support .txt, .csv, .xclsx</string>
+                                    </property>
+                                    <property name="alignment">
+                                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                    </property>
+                                   </widget>
+                                  </item>
                                   <item row="0" column="0">
                                    <widget class="QLineEdit" name="filePathLineEdit">
                                     <property name="minimumSize">
@@ -2061,7 +2107,7 @@ background-repeat: no-repeat;</string>
                                    </widget>
                                   </item>
                                   <item row="0" column="1">
-                                   <widget class="QPushButton" name="tickersFileButton">
+                                   <widget class="QPushButton" name="importTickersFileButton">
                                     <property name="minimumSize">
                                      <size>
                                       <width>150</width>
@@ -2090,22 +2136,6 @@ background-repeat: no-repeat;</string>
                                     </property>
                                    </widget>
                                   </item>
-                                  <item row="1" column="0" colspan="2">
-                                   <widget class="QLabel" name="importFileDescriptionLabel">
-                                    <property name="styleSheet">
-                                     <string notr="true">color: rgb(113, 126, 149);</string>
-                                    </property>
-                                    <property name="lineWidth">
-                                     <number>1</number>
-                                    </property>
-                                    <property name="text">
-                                     <string>Support .txt, .csv, .xclsx</string>
-                                    </property>
-                                    <property name="alignment">
-                                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                    </property>
-                                   </widget>
-                                  </item>
                                  </layout>
                                 </item>
                                </layout>
@@ -2114,8 +2144,8 @@ background-repeat: no-repeat;</string>
                             </layout>
                            </widget>
                           </item>
-                          <item alignment="Qt::AlignTop">
-                           <widget class="QFrame" name="horizontalFrame_2">
+                          <item alignment="Qt::AlignVCenter">
+                           <widget class="QFrame" name="frame_div_buttons_load_start">
                             <property name="sizePolicy">
                              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                               <horstretch>0</horstretch>
@@ -2136,14 +2166,26 @@ background-repeat: no-repeat;</string>
                             </property>
                             <layout class="QHBoxLayout" name="horizontalLayout_11">
                              <property name="spacing">
-                              <number>22</number>
+                              <number>20</number>
                              </property>
-                             <item>
-                              <widget class="QPushButton" name="pushButton_2">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item alignment="Qt::AlignVCenter">
+                              <widget class="QPushButton" name="loadTickersFromFileButton">
                                <property name="minimumSize">
                                 <size>
-                                 <width>150</width>
-                                 <height>0</height>
+                                 <width>180</width>
+                                 <height>40</height>
                                 </size>
                                </property>
                                <property name="maximumSize">
@@ -2152,17 +2194,24 @@ background-repeat: no-repeat;</string>
                                  <height>16777215</height>
                                 </size>
                                </property>
+                               <property name="cursor">
+                                <cursorShape>PointingHandCursor</cursorShape>
+                               </property>
                                <property name="text">
-                                <string>PushButton</string>
+                                <string>Load Tickers</string>
+                               </property>
+                               <property name="icon">
+                                <iconset resource="resources.qrc">
+                                 <normaloff>:/icons/images/icons/cil-library.png</normaloff>:/icons/images/icons/cil-library.png</iconset>
                                </property>
                               </widget>
                              </item>
                              <item>
-                              <widget class="QPushButton" name="pushButton">
+                              <widget class="QPushButton" name="getDataTickersButton">
                                <property name="minimumSize">
                                 <size>
-                                 <width>150</width>
-                                 <height>0</height>
+                                 <width>180</width>
+                                 <height>40</height>
                                 </size>
                                </property>
                                <property name="maximumSize">
@@ -2171,16 +2220,23 @@ background-repeat: no-repeat;</string>
                                  <height>16777215</height>
                                 </size>
                                </property>
+                               <property name="cursor">
+                                <cursorShape>PointingHandCursor</cursorShape>
+                               </property>
                                <property name="text">
-                                <string>PushButton</string>
+                                <string>Get Quotes Data</string>
+                               </property>
+                               <property name="icon">
+                                <iconset resource="resources.qrc">
+                                 <normaloff>:/icons/images/icons/cil-cloud-download.png</normaloff>:/icons/images/icons/cil-cloud-download.png</iconset>
                                </property>
                               </widget>
                              </item>
                             </layout>
                            </widget>
                           </item>
-                          <item alignment="Qt::AlignTop">
-                           <widget class="QFrame" name="horizontalFrame">
+                          <item>
+                           <widget class="QFrame" name="frame_div_select_tickers">
                             <property name="sizePolicy">
                              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                               <horstretch>0</horstretch>
@@ -2190,36 +2246,97 @@ background-repeat: no-repeat;</string>
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
-                              <height>350</height>
+                              <height>200</height>
+                             </size>
+                            </property>
+                            <property name="sizeIncrement">
+                             <size>
+                              <width>0</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="baseSize">
+                             <size>
+                              <width>0</width>
+                              <height>0</height>
                              </size>
                             </property>
                             <layout class="QHBoxLayout" name="importAndSelectTickersHorizontalLayout">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>10</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>20</number>
+                             </property>
                              <item>
-                              <widget class="QListWidget" name="importedTickersListWidget">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>0</width>
-                                 <height>350</height>
-                                </size>
+                              <layout class="QVBoxLayout" name="importedTickersListLayout">
+                               <property name="topMargin">
+                                <number>0</number>
                                </property>
-                              </widget>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QListWidget" name="importedTickersListWidget">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                   <horstretch>0</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>0</width>
+                                   <height>80</height>
+                                  </size>
+                                 </property>
+                                 <property name="sizeIncrement">
+                                  <size>
+                                   <width>0</width>
+                                   <height>0</height>
+                                  </size>
+                                 </property>
+                                 <property name="baseSize">
+                                  <size>
+                                   <width>0</width>
+                                   <height>0</height>
+                                  </size>
+                                 </property>
+                                 <property name="sizeAdjustPolicy">
+                                  <enum>QAbstractScrollArea::AdjustIgnored</enum>
+                                 </property>
+                                 <property name="movement">
+                                  <enum>QListView::Static</enum>
+                                 </property>
+                                 <property name="resizeMode">
+                                  <enum>QListView::Fixed</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
                              </item>
                              <item>
-                              <layout class="QVBoxLayout" name="buttonsForSelectVerticalLayout">
+                              <layout class="QVBoxLayout" name="buttonsForSelectVerticalLayout" stretch="0,0,0,0">
                                <property name="spacing">
-                                <number>1</number>
+                                <number>80</number>
                                </property>
                                <property name="leftMargin">
                                 <number>20</number>
                                </property>
                                <property name="topMargin">
-                                <number>0</number>
+                                <number>10</number>
                                </property>
                                <property name="rightMargin">
                                 <number>20</number>
                                </property>
                                <property name="bottomMargin">
-                                <number>0</number>
+                                <number>250</number>
                                </property>
                                <item alignment="Qt::AlignHCenter">
                                 <widget class="QPushButton" name="trackButton">
@@ -2332,17 +2449,68 @@ background-position: center;</string>
                               </layout>
                              </item>
                              <item>
-                              <widget class="QListWidget" name="selectedTickersListWidget">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>0</width>
-                                 <height>350</height>
-                                </size>
+                              <layout class="QVBoxLayout" name="selectedTickersListLayout">
+                               <property name="topMargin">
+                                <number>0</number>
                                </property>
-                              </widget>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QListWidget" name="selectedTickersListWidget">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                   <horstretch>0</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>0</width>
+                                   <height>80</height>
+                                  </size>
+                                 </property>
+                                 <property name="sizeIncrement">
+                                  <size>
+                                   <width>0</width>
+                                   <height>0</height>
+                                  </size>
+                                 </property>
+                                 <property name="baseSize">
+                                  <size>
+                                   <width>0</width>
+                                   <height>0</height>
+                                  </size>
+                                 </property>
+                                 <property name="resizeMode">
+                                  <enum>QListView::Fixed</enum>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
                              </item>
                             </layout>
                            </widget>
+                          </item>
+                          <item>
+                           <layout class="QVBoxLayout" name="portfolioPageProgressBarLayout">
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QProgressBar" name="portfolioPageProgressBar">
+                              <property name="value">
+                               <number>24</number>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
                           </item>
                          </layout>
                         </widget>
