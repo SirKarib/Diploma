@@ -11,7 +11,9 @@ from PySide6.QtWidgets import (
     QMainWindow,
     QPushButton,
     QVBoxLayout,
-    QApplication
+    QApplication,
+    QDialog,
+    QFileDialog
 )
 
 from modules import *
@@ -102,6 +104,9 @@ class MainWindow(QMainWindow):
         # SLIDER FOR CHANGING THEME
         widgets.horizontalSlider_2.valueChanged.connect(self.changeTheme)
 
+        # OPEN TICKERS FILE BUTTON
+        widgets.importTickersFileButton.clicked.connect(self.buttonClick)
+
         # EXTRA LEFT BOX
         def openCloseLeftBox():
             UIFunctions.toggleLeftBox(self, True)
@@ -151,6 +156,7 @@ class MainWindow(QMainWindow):
         btn = self.sender()
         btnName = btn.objectName()
 
+        # PAGES ###################################
         # SHOW HOME PAGE
         if btnName == "btn_home":
             widgets.stackedWidget.setCurrentWidget(widgets.home)  # SET PAGE
@@ -180,6 +186,12 @@ class MainWindow(QMainWindow):
             widgets.stackedWidget.setCurrentWidget(widgets.recommended)  # SET PAGE
             UIFunctions.resetStyle(self, btnName)  # RESET ANOTHER BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
+
+        ###############################################################
+        # OPEN FILE DIALOG
+        if btnName == "importTickersFileButton":
+            fname = QFileDialog.getOpenFileName(self, 'Open', filter='Текстовые файлы (*.txt *.csv *xlsx)')
+            widgets.filePathLineEdit.setText(fname[0])
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')

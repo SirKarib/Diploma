@@ -2080,7 +2080,7 @@ background-repeat: no-repeat;</string>
                                      <number>1</number>
                                     </property>
                                     <property name="text">
-                                     <string>Support .txt, .csv, .xclsx</string>
+                                     <string>Support .txt, .csv, .xlsx</string>
                                     </property>
                                     <property name="alignment">
                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
