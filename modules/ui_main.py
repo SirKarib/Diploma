@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainoiWaPz.ui'
+## Form generated from reading UI file 'mainzVEHeR.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1280, 720)
+        MainWindow.resize(1266, 720)
         MainWindow.setMinimumSize(QSize(940, 560))
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
@@ -1059,208 +1059,327 @@ class Ui_MainWindow(object):
         self.verticalLayout.setSpacing(10)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(10, 10, 10, 10)
-        self.row_1 = QFrame(self.portfolio)
-        self.row_1.setObjectName(u"row_1")
-        self.row_1.setFrameShape(QFrame.StyledPanel)
-        self.row_1.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_16 = QVBoxLayout(self.row_1)
+        self.frame_portfolio = QFrame(self.portfolio)
+        self.frame_portfolio.setObjectName(u"frame_portfolio")
+        self.frame_portfolio.setFrameShape(QFrame.StyledPanel)
+        self.frame_portfolio.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_16 = QVBoxLayout(self.frame_portfolio)
         self.verticalLayout_16.setSpacing(0)
         self.verticalLayout_16.setObjectName(u"verticalLayout_16")
         self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
-        self.frame_div_content_1 = QFrame(self.row_1)
-        self.frame_div_content_1.setObjectName(u"frame_div_content_1")
-        self.frame_div_content_1.setMinimumSize(QSize(0, 110))
-        self.frame_div_content_1.setMaximumSize(QSize(16777215, 110))
-        self.frame_div_content_1.setFrameShape(QFrame.NoFrame)
-        self.frame_div_content_1.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_17 = QVBoxLayout(self.frame_div_content_1)
+        self.frame_div_import_file = QFrame(self.frame_portfolio)
+        self.frame_div_import_file.setObjectName(u"frame_div_import_file")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.frame_div_import_file.sizePolicy().hasHeightForWidth())
+        self.frame_div_import_file.setSizePolicy(sizePolicy4)
+        self.frame_div_import_file.setMinimumSize(QSize(0, 110))
+        self.frame_div_import_file.setMaximumSize(QSize(16777215, 110))
+        self.frame_div_import_file.setFrameShape(QFrame.NoFrame)
+        self.frame_div_import_file.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_17 = QVBoxLayout(self.frame_div_import_file)
         self.verticalLayout_17.setSpacing(0)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
         self.verticalLayout_17.setContentsMargins(0, 0, 0, 0)
-        self.frame_title_wid_1 = QFrame(self.frame_div_content_1)
-        self.frame_title_wid_1.setObjectName(u"frame_title_wid_1")
-        self.frame_title_wid_1.setMaximumSize(QSize(16777215, 35))
-        self.frame_title_wid_1.setFrameShape(QFrame.StyledPanel)
-        self.frame_title_wid_1.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_18 = QVBoxLayout(self.frame_title_wid_1)
+        self.frame_title_importFile = QFrame(self.frame_div_import_file)
+        self.frame_title_importFile.setObjectName(u"frame_title_importFile")
+        self.frame_title_importFile.setMaximumSize(QSize(16777215, 35))
+        self.frame_title_importFile.setFrameShape(QFrame.StyledPanel)
+        self.frame_title_importFile.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_18 = QVBoxLayout(self.frame_title_importFile)
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
-        self.labelBoxBlenderInstalation = QLabel(self.frame_title_wid_1)
-        self.labelBoxBlenderInstalation.setObjectName(u"labelBoxBlenderInstalation")
-        self.labelBoxBlenderInstalation.setFont(font)
-        self.labelBoxBlenderInstalation.setStyleSheet(u"")
+        self.importFileLabel = QLabel(self.frame_title_importFile)
+        self.importFileLabel.setObjectName(u"importFileLabel")
+        self.importFileLabel.setFont(font)
+        self.importFileLabel.setStyleSheet(u"")
 
-        self.verticalLayout_18.addWidget(self.labelBoxBlenderInstalation)
+        self.verticalLayout_18.addWidget(self.importFileLabel)
 
 
-        self.verticalLayout_17.addWidget(self.frame_title_wid_1)
+        self.verticalLayout_17.addWidget(self.frame_title_importFile)
 
-        self.frame_content_wid_1 = QFrame(self.frame_div_content_1)
-        self.frame_content_wid_1.setObjectName(u"frame_content_wid_1")
-        self.frame_content_wid_1.setFrameShape(QFrame.NoFrame)
-        self.frame_content_wid_1.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_9 = QHBoxLayout(self.frame_content_wid_1)
+        self.frame_import_file = QFrame(self.frame_div_import_file)
+        self.frame_import_file.setObjectName(u"frame_import_file")
+        self.frame_import_file.setFrameShape(QFrame.NoFrame)
+        self.frame_import_file.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_9 = QHBoxLayout(self.frame_import_file)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
-        self.gridLayout = QGridLayout()
-        self.gridLayout.setObjectName(u"gridLayout")
-        self.gridLayout.setContentsMargins(-1, -1, -1, 0)
-        self.lineEdit = QLineEdit(self.frame_content_wid_1)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setMinimumSize(QSize(0, 30))
-        self.lineEdit.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+        self.importFileLayout = QGridLayout()
+        self.importFileLayout.setObjectName(u"importFileLayout")
+        self.importFileLayout.setContentsMargins(-1, -1, -1, 0)
+        self.filePathLineEdit = QLineEdit(self.frame_import_file)
+        self.filePathLineEdit.setObjectName(u"filePathLineEdit")
+        self.filePathLineEdit.setMinimumSize(QSize(0, 30))
+        self.filePathLineEdit.setStyleSheet(u"background-color: rgb(33, 37, 43);")
 
-        self.gridLayout.addWidget(self.lineEdit, 0, 0, 1, 1)
+        self.importFileLayout.addWidget(self.filePathLineEdit, 0, 0, 1, 1)
 
-        self.pushButton = QPushButton(self.frame_content_wid_1)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(150, 30))
-        self.pushButton.setFont(font)
-        self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton.setStyleSheet(u"background-color: rgb(52, 59, 72);")
+        self.tickersFileButton = QPushButton(self.frame_import_file)
+        self.tickersFileButton.setObjectName(u"tickersFileButton")
+        self.tickersFileButton.setMinimumSize(QSize(150, 30))
+        self.tickersFileButton.setFont(font)
+        self.tickersFileButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.tickersFileButton.setStyleSheet(u"background-color: rgb(52, 59, 72);")
         icon4 = QIcon()
         icon4.addFile(u":/icons/images/icons/cil-folder-open.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton.setIcon(icon4)
+        self.tickersFileButton.setIcon(icon4)
 
-        self.gridLayout.addWidget(self.pushButton, 0, 1, 1, 1)
+        self.importFileLayout.addWidget(self.tickersFileButton, 0, 1, 1, 1)
 
-        self.labelVersion_3 = QLabel(self.frame_content_wid_1)
-        self.labelVersion_3.setObjectName(u"labelVersion_3")
-        self.labelVersion_3.setStyleSheet(u"color: rgb(113, 126, 149);")
-        self.labelVersion_3.setLineWidth(1)
-        self.labelVersion_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.importFileDescriptionLabel = QLabel(self.frame_import_file)
+        self.importFileDescriptionLabel.setObjectName(u"importFileDescriptionLabel")
+        self.importFileDescriptionLabel.setStyleSheet(u"color: rgb(113, 126, 149);")
+        self.importFileDescriptionLabel.setLineWidth(1)
+        self.importFileDescriptionLabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
-        self.gridLayout.addWidget(self.labelVersion_3, 1, 0, 1, 2)
-
-
-        self.horizontalLayout_9.addLayout(self.gridLayout)
+        self.importFileLayout.addWidget(self.importFileDescriptionLabel, 1, 0, 1, 2)
 
 
-        self.verticalLayout_17.addWidget(self.frame_content_wid_1)
+        self.horizontalLayout_9.addLayout(self.importFileLayout)
 
 
-        self.verticalLayout_16.addWidget(self.frame_div_content_1)
+        self.verticalLayout_17.addWidget(self.frame_import_file)
 
 
-        self.verticalLayout.addWidget(self.row_1)
+        self.verticalLayout_16.addWidget(self.frame_div_import_file, 0, Qt.AlignTop)
 
-        self.row_2 = QFrame(self.portfolio)
+        self.horizontalFrame_2 = QFrame(self.frame_portfolio)
+        self.horizontalFrame_2.setObjectName(u"horizontalFrame_2")
+        sizePolicy4.setHeightForWidth(self.horizontalFrame_2.sizePolicy().hasHeightForWidth())
+        self.horizontalFrame_2.setSizePolicy(sizePolicy4)
+        self.horizontalFrame_2.setMinimumSize(QSize(0, 50))
+        self.horizontalFrame_2.setMaximumSize(QSize(16777215, 50))
+        self.horizontalLayout_11 = QHBoxLayout(self.horizontalFrame_2)
+        self.horizontalLayout_11.setSpacing(22)
+        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
+        self.pushButton_2 = QPushButton(self.horizontalFrame_2)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.pushButton_2.setMinimumSize(QSize(150, 0))
+        self.pushButton_2.setMaximumSize(QSize(150, 16777215))
+
+        self.horizontalLayout_11.addWidget(self.pushButton_2)
+
+        self.pushButton = QPushButton(self.horizontalFrame_2)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setMinimumSize(QSize(150, 0))
+        self.pushButton.setMaximumSize(QSize(150, 16777215))
+
+        self.horizontalLayout_11.addWidget(self.pushButton)
+
+
+        self.verticalLayout_16.addWidget(self.horizontalFrame_2, 0, Qt.AlignTop)
+
+        self.horizontalFrame = QFrame(self.frame_portfolio)
+        self.horizontalFrame.setObjectName(u"horizontalFrame")
+        sizePolicy3.setHeightForWidth(self.horizontalFrame.sizePolicy().hasHeightForWidth())
+        self.horizontalFrame.setSizePolicy(sizePolicy3)
+        self.horizontalFrame.setMinimumSize(QSize(0, 350))
+        self.importAndSelectTickersHorizontalLayout = QHBoxLayout(self.horizontalFrame)
+        self.importAndSelectTickersHorizontalLayout.setObjectName(u"importAndSelectTickersHorizontalLayout")
+        self.importedTickersListWidget = QListWidget(self.horizontalFrame)
+        self.importedTickersListWidget.setObjectName(u"importedTickersListWidget")
+        self.importedTickersListWidget.setMinimumSize(QSize(0, 350))
+
+        self.importAndSelectTickersHorizontalLayout.addWidget(self.importedTickersListWidget)
+
+        self.buttonsForSelectVerticalLayout = QVBoxLayout()
+        self.buttonsForSelectVerticalLayout.setSpacing(1)
+        self.buttonsForSelectVerticalLayout.setObjectName(u"buttonsForSelectVerticalLayout")
+        self.buttonsForSelectVerticalLayout.setContentsMargins(20, 0, 20, 0)
+        self.trackButton = QPushButton(self.horizontalFrame)
+        self.trackButton.setObjectName(u"trackButton")
+        sizePolicy2.setHeightForWidth(self.trackButton.sizePolicy().hasHeightForWidth())
+        self.trackButton.setSizePolicy(sizePolicy2)
+        self.trackButton.setMinimumSize(QSize(40, 40))
+        self.trackButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.trackButton.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-chevron-right.png);\n"
+                                       "background-repeat: no-repeat;\n"
+                                       "background-position: center;")
+
+        self.buttonsForSelectVerticalLayout.addWidget(self.trackButton, 0, Qt.AlignHCenter)
+
+        self.untrackButton = QPushButton(self.horizontalFrame)
+        self.untrackButton.setObjectName(u"untrackButton")
+        sizePolicy2.setHeightForWidth(self.untrackButton.sizePolicy().hasHeightForWidth())
+        self.untrackButton.setSizePolicy(sizePolicy2)
+        self.untrackButton.setMinimumSize(QSize(40, 40))
+        self.untrackButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.untrackButton.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-chevron-left.png);\n"
+                                         "background-repeat: no-repeat;\n"
+                                         "background-position: center;")
+
+        self.buttonsForSelectVerticalLayout.addWidget(self.untrackButton, 0, Qt.AlignHCenter)
+
+        self.trackAllButton = QPushButton(self.horizontalFrame)
+        self.trackAllButton.setObjectName(u"trackAllButton")
+        sizePolicy2.setHeightForWidth(self.trackAllButton.sizePolicy().hasHeightForWidth())
+        self.trackAllButton.setSizePolicy(sizePolicy2)
+        self.trackAllButton.setMinimumSize(QSize(40, 40))
+        self.trackAllButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.trackAllButton.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-chevron-double-right.png);\n"
+                                          "background-repeat: no-repeat;\n"
+                                          "background-position: center;")
+
+        self.buttonsForSelectVerticalLayout.addWidget(self.trackAllButton, 0, Qt.AlignHCenter)
+
+        self.untrackAllButton = QPushButton(self.horizontalFrame)
+        self.untrackAllButton.setObjectName(u"untrackAllButton")
+        sizePolicy2.setHeightForWidth(self.untrackAllButton.sizePolicy().hasHeightForWidth())
+        self.untrackAllButton.setSizePolicy(sizePolicy2)
+        self.untrackAllButton.setMinimumSize(QSize(40, 40))
+        self.untrackAllButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.untrackAllButton.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-chevron-double-left.png);\n"
+                                            "background-repeat: no-repeat;\n"
+                                            "background-position: center;")
+
+        self.buttonsForSelectVerticalLayout.addWidget(self.untrackAllButton, 0, Qt.AlignHCenter)
+
+
+        self.importAndSelectTickersHorizontalLayout.addLayout(self.buttonsForSelectVerticalLayout)
+
+        self.selectedTickersListWidget = QListWidget(self.horizontalFrame)
+        self.selectedTickersListWidget.setObjectName(u"selectedTickersListWidget")
+        self.selectedTickersListWidget.setMinimumSize(QSize(0, 350))
+
+        self.importAndSelectTickersHorizontalLayout.addWidget(self.selectedTickersListWidget)
+
+
+        self.verticalLayout_16.addWidget(self.horizontalFrame, 0, Qt.AlignTop)
+
+
+        self.verticalLayout.addWidget(self.frame_portfolio, 0, Qt.AlignTop)
+
+        self.stackedWidget.addWidget(self.portfolio)
+        self.processing = QWidget()
+        self.processing.setObjectName(u"processing")
+        self.verticalLayout_20 = QVBoxLayout(self.processing)
+        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
+        self.frame_processing = QFrame(self.processing)
+        self.frame_processing.setObjectName(u"frame_processing")
+        self.frame_processing.setFrameShape(QFrame.StyledPanel)
+        self.frame_processing.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_23 = QVBoxLayout(self.frame_processing)
+        self.verticalLayout_23.setObjectName(u"verticalLayout_23")
+        self.row_2 = QFrame(self.frame_processing)
         self.row_2.setObjectName(u"row_2")
         self.row_2.setMinimumSize(QSize(0, 150))
         self.row_2.setFrameShape(QFrame.StyledPanel)
         self.row_2.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_19 = QVBoxLayout(self.row_2)
-        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
-        self.gridLayout_2 = QGridLayout()
-        self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.checkBox = QCheckBox(self.row_2)
-        self.checkBox.setObjectName(u"checkBox")
-        self.checkBox.setAutoFillBackground(False)
-        self.checkBox.setStyleSheet(u"")
+        self.verticalLayout_22 = QVBoxLayout(self.row_2)
+        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
+        self.gridLayout_3 = QGridLayout()
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.checkBox_2 = QCheckBox(self.row_2)
+        self.checkBox_2.setObjectName(u"checkBox_2")
+        self.checkBox_2.setAutoFillBackground(False)
+        self.checkBox_2.setStyleSheet(u"")
 
-        self.gridLayout_2.addWidget(self.checkBox, 0, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.checkBox_2, 0, 0, 1, 1)
 
-        self.radioButton = QRadioButton(self.row_2)
-        self.radioButton.setObjectName(u"radioButton")
-        self.radioButton.setStyleSheet(u"")
+        self.radioButton_2 = QRadioButton(self.row_2)
+        self.radioButton_2.setObjectName(u"radioButton_2")
+        self.radioButton_2.setStyleSheet(u"")
 
-        self.gridLayout_2.addWidget(self.radioButton, 0, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.radioButton_2, 0, 1, 1, 1)
 
-        self.verticalSlider = QSlider(self.row_2)
-        self.verticalSlider.setObjectName(u"verticalSlider")
-        self.verticalSlider.setStyleSheet(u"")
-        self.verticalSlider.setOrientation(Qt.Vertical)
+        self.verticalSlider_2 = QSlider(self.row_2)
+        self.verticalSlider_2.setObjectName(u"verticalSlider_2")
+        self.verticalSlider_2.setStyleSheet(u"")
+        self.verticalSlider_2.setOrientation(Qt.Vertical)
 
-        self.gridLayout_2.addWidget(self.verticalSlider, 0, 2, 3, 1)
+        self.gridLayout_3.addWidget(self.verticalSlider_2, 0, 2, 3, 1)
 
-        self.verticalScrollBar = QScrollBar(self.row_2)
-        self.verticalScrollBar.setObjectName(u"verticalScrollBar")
-        self.verticalScrollBar.setStyleSheet(u" QScrollBar:vertical { background: rgb(52, 59, 72); }\n"
-                                             " QScrollBar:horizontal { background: rgb(52, 59, 72); }")
-        self.verticalScrollBar.setOrientation(Qt.Vertical)
-
-        self.gridLayout_2.addWidget(self.verticalScrollBar, 0, 4, 3, 1)
-
-        self.scrollArea = QScrollArea(self.row_2)
-        self.scrollArea.setObjectName(u"scrollArea")
-        self.scrollArea.setStyleSheet(u" QScrollBar:vertical {\n"
-                                      "    background: rgb(52, 59, 72);\n"
-                                      " }\n"
-                                      " QScrollBar:horizontal {\n"
-                                      "    background: rgb(52, 59, 72);\n"
-                                      " }")
-        self.scrollArea.setFrameShape(QFrame.NoFrame)
-        self.scrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
-        self.scrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
-        self.scrollArea.setWidgetResizable(True)
-        self.scrollAreaWidgetContents = QWidget()
-        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 218, 218))
-        self.scrollAreaWidgetContents.setStyleSheet(u" QScrollBar:vertical {\n"
-                                                    "	border: none;\n"
-                                                    "    background: rgb(52, 59, 72);\n"
-                                                    "    width: 14px;\n"
-                                                    "    margin: 21px 0 21px 0;\n"
-                                                    "	border-radius: 0px;\n"
-                                                    " }")
-        self.horizontalLayout_11 = QHBoxLayout(self.scrollAreaWidgetContents)
-        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
-        self.plainTextEdit = QPlainTextEdit(self.scrollAreaWidgetContents)
-        self.plainTextEdit.setObjectName(u"plainTextEdit")
-        self.plainTextEdit.setMinimumSize(QSize(200, 200))
-        self.plainTextEdit.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-
-        self.horizontalLayout_11.addWidget(self.plainTextEdit)
-
-        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-
-        self.gridLayout_2.addWidget(self.scrollArea, 0, 5, 3, 1)
-
-        self.comboBox = QComboBox(self.row_2)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setFont(font)
-        self.comboBox.setAutoFillBackground(False)
-        self.comboBox.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-        self.comboBox.setIconSize(QSize(16, 16))
-        self.comboBox.setFrame(True)
-
-        self.gridLayout_2.addWidget(self.comboBox, 1, 0, 1, 2)
-
-        self.horizontalScrollBar = QScrollBar(self.row_2)
-        self.horizontalScrollBar.setObjectName(u"horizontalScrollBar")
-        sizePolicy.setHeightForWidth(self.horizontalScrollBar.sizePolicy().hasHeightForWidth())
-        self.horizontalScrollBar.setSizePolicy(sizePolicy)
-        self.horizontalScrollBar.setStyleSheet(u" QScrollBar:vertical { background: rgb(52, 59, 72); }\n"
+        self.verticalScrollBar_2 = QScrollBar(self.row_2)
+        self.verticalScrollBar_2.setObjectName(u"verticalScrollBar_2")
+        self.verticalScrollBar_2.setStyleSheet(u" QScrollBar:vertical { background: rgb(52, 59, 72); }\n"
                                                " QScrollBar:horizontal { background: rgb(52, 59, 72); }")
-        self.horizontalScrollBar.setOrientation(Qt.Horizontal)
+        self.verticalScrollBar_2.setOrientation(Qt.Vertical)
 
-        self.gridLayout_2.addWidget(self.horizontalScrollBar, 1, 3, 1, 1)
+        self.gridLayout_3.addWidget(self.verticalScrollBar_2, 0, 4, 3, 1)
 
-        self.commandLinkButton = QCommandLinkButton(self.row_2)
-        self.commandLinkButton.setObjectName(u"commandLinkButton")
-        self.commandLinkButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.commandLinkButton.setStyleSheet(u"")
+        self.scrollArea_2 = QScrollArea(self.row_2)
+        self.scrollArea_2.setObjectName(u"scrollArea_2")
+        self.scrollArea_2.setStyleSheet(u" QScrollBar:vertical {\n"
+                                        "    background: rgb(52, 59, 72);\n"
+                                        " }\n"
+                                        " QScrollBar:horizontal {\n"
+                                        "    background: rgb(52, 59, 72);\n"
+                                        " }")
+        self.scrollArea_2.setFrameShape(QFrame.NoFrame)
+        self.scrollArea_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.scrollArea_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.scrollArea_2.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_2 = QWidget()
+        self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 218, 218))
+        self.scrollAreaWidgetContents_2.setStyleSheet(u" QScrollBar:vertical {\n"
+                                                      "	border: none;\n"
+                                                      "    background: rgb(52, 59, 72);\n"
+                                                      "    width: 14px;\n"
+                                                      "    margin: 21px 0 21px 0;\n"
+                                                      "	border-radius: 0px;\n"
+                                                      " }")
+        self.horizontalLayout_13 = QHBoxLayout(self.scrollAreaWidgetContents_2)
+        self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
+        self.plainTextEdit_2 = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.plainTextEdit_2.setObjectName(u"plainTextEdit_2")
+        self.plainTextEdit_2.setMinimumSize(QSize(200, 200))
+        self.plainTextEdit_2.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.horizontalLayout_13.addWidget(self.plainTextEdit_2)
+
+        self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
+
+        self.gridLayout_3.addWidget(self.scrollArea_2, 0, 5, 3, 1)
+
+        self.comboBox_2 = QComboBox(self.row_2)
+        self.comboBox_2.addItem("")
+        self.comboBox_2.addItem("")
+        self.comboBox_2.addItem("")
+        self.comboBox_2.setObjectName(u"comboBox_2")
+        self.comboBox_2.setFont(font)
+        self.comboBox_2.setAutoFillBackground(False)
+        self.comboBox_2.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+        self.comboBox_2.setIconSize(QSize(16, 16))
+        self.comboBox_2.setFrame(True)
+
+        self.gridLayout_3.addWidget(self.comboBox_2, 1, 0, 1, 2)
+
+        self.horizontalScrollBar_2 = QScrollBar(self.row_2)
+        self.horizontalScrollBar_2.setObjectName(u"horizontalScrollBar_2")
+        sizePolicy.setHeightForWidth(self.horizontalScrollBar_2.sizePolicy().hasHeightForWidth())
+        self.horizontalScrollBar_2.setSizePolicy(sizePolicy)
+        self.horizontalScrollBar_2.setStyleSheet(u" QScrollBar:vertical { background: rgb(52, 59, 72); }\n"
+                                                 " QScrollBar:horizontal { background: rgb(52, 59, 72); }")
+        self.horizontalScrollBar_2.setOrientation(Qt.Horizontal)
+
+        self.gridLayout_3.addWidget(self.horizontalScrollBar_2, 1, 3, 1, 1)
+
+        self.commandLinkButton_2 = QCommandLinkButton(self.row_2)
+        self.commandLinkButton_2.setObjectName(u"commandLinkButton_2")
+        self.commandLinkButton_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.commandLinkButton_2.setStyleSheet(u"")
         icon5 = QIcon()
         icon5.addFile(u":/icons/images/icons/cil-link.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.commandLinkButton.setIcon(icon5)
+        self.commandLinkButton_2.setIcon(icon5)
 
-        self.gridLayout_2.addWidget(self.commandLinkButton, 1, 6, 1, 1)
+        self.gridLayout_3.addWidget(self.commandLinkButton_2, 1, 6, 1, 1)
 
-        self.horizontalSlider = QSlider(self.row_2)
-        self.horizontalSlider.setObjectName(u"horizontalSlider")
-        self.horizontalSlider.setStyleSheet(u"")
-        self.horizontalSlider.setOrientation(Qt.Horizontal)
+        self.horizontalSlider_3 = QSlider(self.row_2)
+        self.horizontalSlider_3.setObjectName(u"horizontalSlider_3")
+        self.horizontalSlider_3.setStyleSheet(u"")
+        self.horizontalSlider_3.setOrientation(Qt.Horizontal)
 
-        self.gridLayout_2.addWidget(self.horizontalSlider, 2, 0, 1, 2)
-
-
-        self.verticalLayout_19.addLayout(self.gridLayout_2)
+        self.gridLayout_3.addWidget(self.horizontalSlider_3, 2, 0, 1, 2)
 
 
-        self.verticalLayout.addWidget(self.row_2)
+        self.verticalLayout_22.addLayout(self.gridLayout_3)
 
-        self.row_3 = QFrame(self.portfolio)
+
+        self.verticalLayout_23.addWidget(self.row_2)
+
+        self.row_3 = QFrame(self.frame_processing)
         self.row_3.setObjectName(u"row_3")
         self.row_3.setMinimumSize(QSize(0, 150))
         self.row_3.setFrameShape(QFrame.StyledPanel)
@@ -1325,11 +1444,11 @@ class Ui_MainWindow(object):
         __qtablewidgetitem23 = QTableWidgetItem()
         self.tableWidget.setItem(0, 3, __qtablewidgetitem23)
         self.tableWidget.setObjectName(u"tableWidget")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
-        self.tableWidget.setSizePolicy(sizePolicy4)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
+        self.tableWidget.setSizePolicy(sizePolicy5)
         palette = QPalette()
         brush = QBrush(QColor(221, 221, 221, 255))
         brush.setStyle(Qt.SolidPattern)
@@ -1390,18 +1509,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_12.addWidget(self.tableWidget)
 
 
-        self.verticalLayout.addWidget(self.row_3)
+        self.verticalLayout_23.addWidget(self.row_3)
 
-        self.stackedWidget.addWidget(self.portfolio)
-        self.processing = QWidget()
-        self.processing.setObjectName(u"processing")
-        self.verticalLayout_20 = QVBoxLayout(self.processing)
-        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.widget = QWidget(self.processing)
-        self.widget.setObjectName(u"widget")
-        self.widget.setMaximumSize(QSize(16777215, 585))
 
-        self.verticalLayout_20.addWidget(self.widget)
+        self.verticalLayout_20.addWidget(self.frame_processing)
 
         self.stackedWidget.addWidget(self.processing)
         self.graphs = QWidget()
@@ -1557,7 +1668,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1613,19 +1724,25 @@ class Ui_MainWindow(object):
         self.closeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close", None))
         #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
-        self.labelBoxBlenderInstalation.setText(QCoreApplication.translate("MainWindow", u"FILE BOX", None))
-        self.lineEdit.setText("")
-        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Open", None))
-        self.labelVersion_3.setText(QCoreApplication.translate("MainWindow", u"Label description", None))
-        self.checkBox.setText(QCoreApplication.translate("MainWindow", u"CheckBox", None))
-        self.radioButton.setText(QCoreApplication.translate("MainWindow", u"RadioButton", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Test 1", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Test 2", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Test 3", None))
+        self.importFileLabel.setText(QCoreApplication.translate("MainWindow", u"IMPORT FILE WITH TICKERS", None))
+        self.filePathLineEdit.setText("")
+        self.filePathLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
+        self.tickersFileButton.setText(QCoreApplication.translate("MainWindow", u"Open", None))
+        self.importFileDescriptionLabel.setText(QCoreApplication.translate("MainWindow", u"Support .txt, .csv, .xclsx", None))
+        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.trackButton.setText("")
+        self.untrackButton.setText("")
+        self.trackAllButton.setText("")
+        self.untrackAllButton.setText("")
+        self.checkBox_2.setText(QCoreApplication.translate("MainWindow", u"CheckBox", None))
+        self.radioButton_2.setText(QCoreApplication.translate("MainWindow", u"RadioButton", None))
+        self.comboBox_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Test 1", None))
+        self.comboBox_2.setItemText(1, QCoreApplication.translate("MainWindow", u"Test 2", None))
+        self.comboBox_2.setItemText(2, QCoreApplication.translate("MainWindow", u"Test 3", None))
 
-        self.commandLinkButton.setText(QCoreApplication.translate("MainWindow", u"Link Button", None))
-        self.commandLinkButton.setDescription(QCoreApplication.translate("MainWindow", u"Link description", None))
+        self.commandLinkButton_2.setText(QCoreApplication.translate("MainWindow", u"Link Button", None))
+        self.commandLinkButton_2.setDescription(QCoreApplication.translate("MainWindow", u"Link description", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"0", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
