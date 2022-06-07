@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainLMUNoQ.ui'
+## Form generated from reading UI file 'mainoiWaPz.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -709,28 +709,6 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_8.addWidget(self.btn_recommended)
 
-        self.btn_no_recommended = QPushButton(self.topMenu)
-        self.btn_no_recommended.setObjectName(u"btn_no_recommended")
-        sizePolicy.setHeightForWidth(self.btn_no_recommended.sizePolicy().hasHeightForWidth())
-        self.btn_no_recommended.setSizePolicy(sizePolicy)
-        self.btn_no_recommended.setMinimumSize(QSize(0, 45))
-        self.btn_no_recommended.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_no_recommended.setLayoutDirection(Qt.LeftToRight)
-        self.btn_no_recommended.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-thumb-down.png)")
-
-        self.verticalLayout_8.addWidget(self.btn_no_recommended)
-
-        self.btn_recent = QPushButton(self.topMenu)
-        self.btn_recent.setObjectName(u"btn_recent")
-        sizePolicy.setHeightForWidth(self.btn_recent.sizePolicy().hasHeightForWidth())
-        self.btn_recent.setSizePolicy(sizePolicy)
-        self.btn_recent.setMinimumSize(QSize(0, 45))
-        self.btn_recent.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_recent.setLayoutDirection(Qt.LeftToRight)
-        self.btn_recent.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-history.png)")
-
-        self.verticalLayout_8.addWidget(self.btn_recent)
-
 
         self.verticalMenuLayout.addWidget(self.topMenu, 0, Qt.AlignTop)
 
@@ -1215,7 +1193,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 353, 218))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 218, 218))
         self.scrollAreaWidgetContents.setStyleSheet(u" QScrollBar:vertical {\n"
                                                     "	border: none;\n"
                                                     "    background: rgb(52, 59, 72);\n"
@@ -1439,12 +1417,6 @@ class Ui_MainWindow(object):
         self.recommended = QWidget()
         self.recommended.setObjectName(u"recommended")
         self.stackedWidget.addWidget(self.recommended)
-        self.no_recommended = QWidget()
-        self.no_recommended.setObjectName(u"no_recommended")
-        self.stackedWidget.addWidget(self.no_recommended)
-        self.recent = QWidget()
-        self.recent.setObjectName(u"recent")
-        self.stackedWidget.addWidget(self.recent)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)
 
@@ -1585,7 +1557,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1601,8 +1573,6 @@ class Ui_MainWindow(object):
         self.btn_processing.setText(QCoreApplication.translate("MainWindow", u"Processing", None))
         self.btn_graphs.setText(QCoreApplication.translate("MainWindow", u"Recommended", None))
         self.btn_recommended.setText(QCoreApplication.translate("MainWindow", u"Graphs", None))
-        self.btn_no_recommended.setText(QCoreApplication.translate("MainWindow", u"Not recommended", None))
-        self.btn_recent.setText(QCoreApplication.translate("MainWindow", u"Recent", None))
         self.toggleLeftBox.setText(QCoreApplication.translate("MainWindow", u"Left Box", None))
         self.extraLabel.setText(QCoreApplication.translate("MainWindow", u"Left Box", None))
         #if QT_CONFIG(tooltip)
@@ -1714,6 +1684,6 @@ class Ui_MainWindow(object):
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
         self.creditsLabel.setText(QCoreApplication.translate("MainWindow", u"By: SirKarib", None))
-        self.version.setText(QCoreApplication.translate("MainWindow", u"v1.0.3", None))
+        self.version.setText(QCoreApplication.translate("MainWindow", u"v1.0.0", None))
     # retranslateUi
 

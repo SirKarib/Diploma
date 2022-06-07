@@ -98,8 +98,6 @@ class MainWindow(QMainWindow):
         widgets.btn_processing.clicked.connect(self.buttonClick)
         widgets.btn_graphs.clicked.connect(self.buttonClick)
         widgets.btn_recommended.clicked.connect(self.buttonClick)
-        widgets.btn_no_recommended.clicked.connect(self.buttonClick)
-        widgets.btn_recent.clicked.connect(self.buttonClick)
 
         # SLIDER FOR CHANGING THEME
         widgets.horizontalSlider_2.valueChanged.connect(self.changeTheme)
@@ -180,18 +178,6 @@ class MainWindow(QMainWindow):
         # SHOW RECOMMENDED PAGE
         if btnName == "btn_recommended":
             widgets.stackedWidget.setCurrentWidget(widgets.recommended)  # SET PAGE
-            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHER BUTTONS SELECTED
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
-
-        # SHOW NO RECOMMENDED PAGE
-        if btnName == "btn_no_recommended":
-            widgets.stackedWidget.setCurrentWidget(widgets.no_recommended)  # SET PAGE
-            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHER BUTTONS SELECTED
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
-
-        # SHOW RECENT PAGE
-        if btnName == "btn_recent":
-            widgets.stackedWidget.setCurrentWidget(widgets.recent)  # SET PAGE
             UIFunctions.resetStyle(self, btnName)  # RESET ANOTHER BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
