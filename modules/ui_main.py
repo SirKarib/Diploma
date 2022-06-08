@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainJqEeuR.ui'
+## Form generated from reading UI file 'mainrizpmv.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -1160,7 +1160,7 @@ class Ui_MainWindow(object):
         self.frame_div_buttons_load_start.setMinimumSize(QSize(0, 50))
         self.frame_div_buttons_load_start.setMaximumSize(QSize(16777215, 50))
         self.horizontalLayout_11 = QHBoxLayout(self.frame_div_buttons_load_start)
-        self.horizontalLayout_11.setSpacing(20)
+        self.horizontalLayout_11.setSpacing(110)
         self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
         self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
         self.loadTickersFromFileButton = QPushButton(self.frame_div_buttons_load_start)
@@ -1186,7 +1186,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_11.addWidget(self.getDataTickersButton)
 
 
-        self.verticalLayout_16.addWidget(self.frame_div_buttons_load_start, 0, Qt.AlignVCenter)
+        self.verticalLayout_16.addWidget(self.frame_div_buttons_load_start, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
         self.frame_div_select_tickers = QFrame(self.frame_portfolio)
         self.frame_div_select_tickers.setObjectName(u"frame_div_select_tickers")
