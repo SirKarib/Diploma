@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainjjfTQk.ui'
+## Form generated from reading UI file 'mainwCveXW.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -1211,6 +1211,12 @@ class Ui_MainWindow(object):
         self.importedTickersListWidget.setMinimumSize(QSize(0, 80))
         self.importedTickersListWidget.setSizeIncrement(QSize(0, 0))
         self.importedTickersListWidget.setBaseSize(QSize(0, 0))
+        font4 = QFont()
+        font4.setPointSize(16)
+        font4.setBold(True)
+        font4.setItalic(False)
+        self.importedTickersListWidget.setFont(font4)
+        self.importedTickersListWidget.setStyleSheet(u"font: 700 16pt \"Segoe UI\";")
         self.importedTickersListWidget.setSizeAdjustPolicy(QAbstractScrollArea.AdjustIgnored)
         self.importedTickersListWidget.setMovement(QListView.Static)
         self.importedTickersListWidget.setResizeMode(QListView.Fixed)
@@ -1285,6 +1291,7 @@ class Ui_MainWindow(object):
         self.selectedTickersListWidget.setMinimumSize(QSize(0, 80))
         self.selectedTickersListWidget.setSizeIncrement(QSize(0, 0))
         self.selectedTickersListWidget.setBaseSize(QSize(0, 0))
+        self.selectedTickersListWidget.setStyleSheet(u"font: 700 16pt \"Segoe UI\";")
         self.selectedTickersListWidget.setResizeMode(QListView.Fixed)
 
         self.selectedTickersListLayout.addWidget(self.selectedTickersListWidget)
@@ -1461,9 +1468,9 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         if (self.tableWidget.rowCount() < 16):
             self.tableWidget.setRowCount(16)
-        font4 = QFont()
+        font5 = QFont()
         __qtablewidgetitem4 = QTableWidgetItem()
-        __qtablewidgetitem4.setFont(font4);
+        __qtablewidgetitem4.setFont(font5);
         self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem5)
@@ -1686,10 +1693,10 @@ class Ui_MainWindow(object):
         self.creditsLabel = QLabel(self.bottomBar)
         self.creditsLabel.setObjectName(u"creditsLabel")
         self.creditsLabel.setMaximumSize(QSize(16777215, 16))
-        font5 = QFont()
-        font5.setBold(False)
-        font5.setItalic(False)
-        self.creditsLabel.setFont(font5)
+        font6 = QFont()
+        font6.setBold(False)
+        font6.setItalic(False)
+        self.creditsLabel.setFont(font6)
         self.creditsLabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.horizontalLayout_5.addWidget(self.creditsLabel)
@@ -1782,7 +1789,7 @@ class Ui_MainWindow(object):
         #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
         self.importFileLabel.setText(QCoreApplication.translate("MainWindow", u"IMPORT FILE WITH TICKERS", None))
-        self.importFileDescriptionLabel.setText(QCoreApplication.translate("MainWindow", u"Support .txt, .csv", None))
+        self.importFileDescriptionLabel.setText(QCoreApplication.translate("MainWindow", u"Support .txt, Enter data from a new line in the Ticker-Currency format, example: BTC-USD", None))
         self.filePathLineEdit.setText("")
         self.filePathLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
         self.importTickersFileButton.setText(QCoreApplication.translate("MainWindow", u"Open", None))

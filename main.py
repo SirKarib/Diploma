@@ -153,7 +153,11 @@ class MainWindow(QMainWindow):
         widgets.tableWidget.setItem(2, 0, QTableWidgetItem("Ticker"))
 
     def import_tickers_list(self):
-        pass
+        file_path = widgets.filePathLineEdit.text()
+        with open(file_path, 'r', encoding='utf-8') as tickers_file:
+            tickers = tickers_file.read().split()
+            for ticker in tickers:
+                widgets.importedTickersListWidget.addItem(ticker)
 
     # BUTTONS CLICK
     # Post here your functions for clicked buttons
@@ -196,7 +200,7 @@ class MainWindow(QMainWindow):
         ###############################################################
         # OPEN FILE DIALOG
         if btnName == "importTickersFileButton":
-            file_path = QFileDialog.getOpenFileName(self, 'Open', filter='Текстовые файлы (*.txt *.csv)')
+            file_path = QFileDialog.getOpenFileName(self, 'Open', filter='Текстовые файлы (*.txt)')
             widgets.filePathLineEdit.setText(file_path[0])
 
         # IMPORT TICKERS FROM FILE FROM PATH
@@ -205,7 +209,7 @@ class MainWindow(QMainWindow):
 
             try:
                 with open(file_path, 'r', encoding='utf-8') as tickers_file:
-                    # CHECK TXT & CSV FILE IS EMPTY
+                    # CHECK TXT FILE IS EMPTY
                     tickers_file.seek(0, os.SEEK_END)  # go to end of file
                     if tickers_file.tell():  # if current position is true (i.e != 0)
                         tickers_file.seek(0)  # rewind the file for later use

@@ -2080,7 +2080,7 @@ background-repeat: no-repeat;</string>
                                      <number>1</number>
                                     </property>
                                     <property name="text">
-                                     <string>Support .txt, .csv</string>
+                                     <string>Support .txt, Enter data from a new line in the Ticker-Currency format, example: BTC-USD</string>
                                     </property>
                                     <property name="alignment">
                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2308,6 +2308,16 @@ background-repeat: no-repeat;</string>
                                    <height>0</height>
                                   </size>
                                  </property>
+                                 <property name="font">
+                                  <font>
+                                   <pointsize>16</pointsize>
+                                   <italic>false</italic>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">font: 700 16pt &quot;Segoe UI&quot;;</string>
+                                 </property>
                                  <property name="sizeAdjustPolicy">
                                   <enum>QAbstractScrollArea::AdjustIgnored</enum>
                                  </property>
@@ -2481,6 +2491,9 @@ background-position: center;</string>
                                    <width>0</width>
                                    <height>0</height>
                                   </size>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">font: 700 16pt &quot;Segoe UI&quot;;</string>
                                  </property>
                                  <property name="resizeMode">
                                   <enum>QListView::Fixed</enum>
