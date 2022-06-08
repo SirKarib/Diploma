@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainKLNnSD.ui'
+## Form generated from reading UI file 'mainjjfTQk.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -1782,7 +1782,7 @@ class Ui_MainWindow(object):
         #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
         self.importFileLabel.setText(QCoreApplication.translate("MainWindow", u"IMPORT FILE WITH TICKERS", None))
-        self.importFileDescriptionLabel.setText(QCoreApplication.translate("MainWindow", u"Support .txt, .csv, .xlsx", None))
+        self.importFileDescriptionLabel.setText(QCoreApplication.translate("MainWindow", u"Support .txt, .csv", None))
         self.filePathLineEdit.setText("")
         self.filePathLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
         self.importTickersFileButton.setText(QCoreApplication.translate("MainWindow", u"Open", None))

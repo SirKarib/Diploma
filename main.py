@@ -105,6 +105,9 @@ class MainWindow(QMainWindow):
         # OPEN TICKERS FILE BUTTON
         widgets.importTickersFileButton.clicked.connect(self.buttonClick)
 
+        # LOAD TICKERS FROM FILE BUTTON
+        widgets.loadTickersFromFileButton.clicked.connect(self.buttonClick)
+
         # EXTRA LEFT BOX
         def openCloseLeftBox():
             UIFunctions.toggleLeftBox(self, True)
@@ -141,13 +144,16 @@ class MainWindow(QMainWindow):
         AppFunctions.setThemeHack(self, mode)  # SET HACKS
 
     @staticmethod
-    def load_data():
+    def load_data_to_table():
         quotes = [
             {"ticker": "AAPL", "currency": "USD", "period": 300},
             {"ticker": "MCD", "currency": "USD", "period": 300}
         ]
 
         widgets.tableWidget.setItem(2, 0, QTableWidgetItem("Ticker"))
+
+    def import_tickers_list(self):
+        pass
 
     # BUTTONS CLICK
     # Post here your functions for clicked buttons
@@ -190,8 +196,26 @@ class MainWindow(QMainWindow):
         ###############################################################
         # OPEN FILE DIALOG
         if btnName == "importTickersFileButton":
-            fname = QFileDialog.getOpenFileName(self, 'Open', filter='Текстовые файлы (*.txt *.csv *xlsx)')
-            widgets.filePathLineEdit.setText(fname[0])
+            file_path = QFileDialog.getOpenFileName(self, 'Open', filter='Текстовые файлы (*.txt *.csv)')
+            widgets.filePathLineEdit.setText(file_path[0])
+
+        # IMPORT TICKERS FROM FILE FROM PATH
+        if btnName == "loadTickersFromFileButton":
+            file_path = widgets.filePathLineEdit.text()
+
+            try:
+                with open(file_path, 'r', encoding='utf-8') as tickers_file:
+                    # CHECK TXT & CSV FILE IS EMPTY
+                    tickers_file.seek(0, os.SEEK_END)  # go to end of file
+                    if tickers_file.tell():  # if current position is true (i.e != 0)
+                        tickers_file.seek(0)  # rewind the file for later use
+                    else:
+                        QtWidgets.QMessageBox().about(self, "Ошибка", "Файл пуст.")
+
+                    # IF FILE ISN'T EMPTY -> IMPORT TICKERS TO LISTBOX
+                    self.import_tickers_list()
+            except FileNotFoundError:
+                QtWidgets.QMessageBox().about(self, "Ошибка", "Некорректный путь к файлу.")
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
