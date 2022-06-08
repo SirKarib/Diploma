@@ -76,11 +76,9 @@ class MainWindow(QMainWindow):
 
         # APP NAME
         title = "CalliduStocks"
-        description = "CalliduStocks - Trading App"
 
         # APPLY TEXTS
         self.setWindowTitle(title)
-        widgets.titleRightInfo.setText(description)
 
         # TOGGLE MENU
         widgets.toggleButton.clicked.connect(lambda: UIFunctions.toggleMenu(self, True))
@@ -134,11 +132,13 @@ class MainWindow(QMainWindow):
         """
 
         if value == 0:
-            UIFunctions.theme(self, "dark")
-            AppFunctions.setDarkThemeHack(self)  # SET HACKS
+            mode = "Dark Mode"
         elif value == 1:
-            UIFunctions.theme(self, "light")
-            AppFunctions.setLightThemeHack(self)  # SET HACKS
+            mode = "Light Mode"
+
+        UIFunctions.theme(self, mode)
+        widgets.titleRightInfo.setText(mode)  # SET TEXT DESCRIPTION
+        AppFunctions.setThemeHack(self, mode)  # SET HACKS
 
     @staticmethod
     def load_data():

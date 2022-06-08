@@ -206,13 +206,13 @@ class UIFunctions(MainWindow):
 
     # IMPORT THEMES FILES QSS/CSS
     # ///////////////////////////////////////////////////////////////
-    def theme(self, select):
+    def theme(self, mode):
         dark_theme = open("themes/py_dracula_dark.qss", 'r').read()
         light_theme = open("themes/py_dracula_light.qss", 'r').read()
 
-        if select == "dark":
+        if mode == "Dark Mode":
             self.ui.styleSheet.setStyleSheet(dark_theme)
-        elif select == "light":
+        elif mode == "Light Mode":
             self.ui.styleSheet.setStyleSheet(light_theme)
 
     # START - GUI DEFINITIONS

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainrizpmv.ui'
+## Form generated from reading UI file 'mainKLNnSD.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -1733,8 +1733,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"PyDracula", None))
-        self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Modern GUI / Flat Style", None))
+        self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"CalliduStocks", None))
+        self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Trading App", None))
         self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"Hide", None))
         self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.btn_portfolio.setText(QCoreApplication.translate("MainWindow", u"Portfolio", None))
@@ -1764,7 +1764,7 @@ class Ui_MainWindow(object):
                                                                        "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">Convert QRC</span></p>\n"
                                                                        "<p align=\"center\" "
                                                                        "style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">pyside6-rcc resources.qrc -o resources_rc.py</span></p></body></html>", None))
-        self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"CalliduStocks - Trading APP", None))
+        self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"Dark Mode", None))
         #if QT_CONFIG(tooltip)
         self.settingsTopBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Settings", None))
         #endif // QT_CONFIG(tooltip)

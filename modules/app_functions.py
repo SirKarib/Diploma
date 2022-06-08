@@ -22,6 +22,13 @@ from main import *
 # WITH ACCESS TO MAIN WINDOW WIDGETS
 # ///////////////////////////////////////////////////////////////
 class AppFunctions(MainWindow):
+    @staticmethod
+    def setThemeHack(self, mode):
+        if mode == "Dark Mode":
+            AppFunctions.setDarkThemeHack(self)
+        elif mode == "Light Mode":
+            AppFunctions.setLightThemeHack(self)
+
     def setLightThemeHack(self):
         Settings.BTN_LEFT_BOX_COLOR = "background-color: #495474;"
         Settings.BTN_RIGHT_BOX_COLOR = "background-color: #495474;"
