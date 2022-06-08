@@ -138,7 +138,6 @@ class MainWindow(QMainWindow):
             mode = "Dark Mode"
         elif value == 1:
             mode = "Light Mode"
-
         UIFunctions.theme(self, mode)
         widgets.titleRightInfo.setText(mode)  # SET TEXT DESCRIPTION
         AppFunctions.setThemeHack(self, mode)  # SET HACKS
@@ -149,7 +148,6 @@ class MainWindow(QMainWindow):
             {"ticker": "AAPL", "currency": "USD", "period": 300},
             {"ticker": "MCD", "currency": "USD", "period": 300}
         ]
-
         widgets.tableWidget.setItem(2, 0, QTableWidgetItem("Ticker"))
 
     def import_tickers_list(self):
@@ -206,7 +204,6 @@ class MainWindow(QMainWindow):
         # IMPORT TICKERS FROM FILE FROM PATH
         if btnName == "loadTickersFromFileButton":
             file_path = widgets.filePathLineEdit.text()
-
             try:
                 with open(file_path, 'r', encoding='utf-8') as tickers_file:
                     # CHECK TXT FILE IS EMPTY
@@ -215,11 +212,26 @@ class MainWindow(QMainWindow):
                         tickers_file.seek(0)  # rewind the file for later use
                     else:
                         QtWidgets.QMessageBox().about(self, "Ошибка", "Файл пуст.")
-
                     # IF FILE ISN'T EMPTY -> IMPORT TICKERS TO LISTBOX
                     self.import_tickers_list()
             except FileNotFoundError:
                 QtWidgets.QMessageBox().about(self, "Ошибка", "Некорректный путь к файлу.")
+
+        # PORTFOLIO PAGE BUTTON >
+        if btnName == "importTickersFileButton":
+            pass
+
+        # PORTFOLIO PAGE BUTTON <
+        if btnName == "importTickersFileButton":
+            pass
+
+        # PORTFOLIO PAGE BUTTON >>
+        if btnName == "importTickersFileButton":
+            pass
+
+        # PORTFOLIO PAGE BUTTON <<
+        if btnName == "importTickersFileButton":
+            pass
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
