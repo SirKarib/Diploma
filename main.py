@@ -108,6 +108,12 @@ class MainWindow(QMainWindow):
         # LOAD TICKERS FROM FILE BUTTON
         widgets.loadTickersFromFileButton.clicked.connect(self.buttonClick)
 
+        # PORTFOLIO PAGE BUTTONS
+        widgets.trackButton.clicked.connect(self.buttonClick)
+        widgets.untrackButton.clicked.connect(self.buttonClick)
+        widgets.trackAllButton.clicked.connect(self.buttonClick)
+        widgets.untrackAllButton.clicked.connect(self.buttonClick)
+
         # EXTRA LEFT BOX
         def openCloseLeftBox():
             UIFunctions.toggleLeftBox(self, True)
@@ -218,20 +224,36 @@ class MainWindow(QMainWindow):
                 QtWidgets.QMessageBox().about(self, "Ошибка", "Некорректный путь к файлу.")
 
         # PORTFOLIO PAGE BUTTON >
-        if btnName == "importTickersFileButton":
-            pass
+        if btnName == "trackButton":
+            current_row = widgets.importedTickersListWidget.currentRow()
+            selected_ticker = widgets.importedTickersListWidget.takeItem(current_row)
+            widgets.selectedTickersListWidget.addItem(selected_ticker)
 
         # PORTFOLIO PAGE BUTTON <
-        if btnName == "importTickersFileButton":
-            pass
+        if btnName == "untrackButton":
+            current_row = widgets.selectedTickersListWidget.currentRow()
+            selected_ticker = widgets.selectedTickersListWidget.takeItem(current_row)
+            widgets.importedTickersListWidget.addItem(selected_ticker)
 
         # PORTFOLIO PAGE BUTTON >>
-        if btnName == "importTickersFileButton":
-            pass
+        if btnName == "trackAllButton":
+            selected_tickers = []
+            for item in range(widgets.importedTickersListWidget.count()):
+                items = widgets.importedTickersListWidget.item(item)
+                selected_tickers.append(items.text())
+            for ticker in selected_tickers:
+                widgets.selectedTickersListWidget.addItem(ticker)
+            widgets.importedTickersListWidget.clear()
 
         # PORTFOLIO PAGE BUTTON <<
-        if btnName == "importTickersFileButton":
-            pass
+        if btnName == "untrackAllButton":
+            selected_tickers = []
+            for item in range(widgets.selectedTickersListWidget.count()):
+                items = widgets.selectedTickersListWidget.item(item)
+                selected_tickers.append(items.text())
+            for ticker in selected_tickers:
+                widgets.importedTickersListWidget.addItem(ticker)
+            widgets.selectedTickersListWidget.clear()
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
