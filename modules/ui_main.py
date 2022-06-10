@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainwCveXW.ui'
+## Form generated from reading UI file 'mainIqjZRX.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -915,7 +915,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3 = QHBoxLayout(self.leftBox)
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_3.setContentsMargins(20, 0, 0, 0)
         self.horizontalSlider_2 = QSlider(self.leftBox)
         self.horizontalSlider_2.setObjectName(u"horizontalSlider_2")
         sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
@@ -1583,10 +1583,92 @@ class Ui_MainWindow(object):
         self.graphs.setObjectName(u"graphs")
         self.verticalLayout_21 = QVBoxLayout(self.graphs)
         self.verticalLayout_21.setObjectName(u"verticalLayout_21")
-        self.label = QLabel(self.graphs)
-        self.label.setObjectName(u"label")
+        self.frame_graphs = QFrame(self.graphs)
+        self.frame_graphs.setObjectName(u"frame_graphs")
+        sizePolicy6.setHeightForWidth(self.frame_graphs.sizePolicy().hasHeightForWidth())
+        self.frame_graphs.setSizePolicy(sizePolicy6)
+        self.frame_graphs.setMinimumSize(QSize(500, 0))
+        self.frame_graphs.setFrameShape(QFrame.StyledPanel)
+        self.frame_graphs.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_24 = QVBoxLayout(self.frame_graphs)
+        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
+        self.graphsHorizontalLayout = QHBoxLayout()
+        self.graphsHorizontalLayout.setSpacing(0)
+        self.graphsHorizontalLayout.setObjectName(u"graphsHorizontalLayout")
+        self.leftGraphsVerticalLayout = QVBoxLayout()
+        self.leftGraphsVerticalLayout.setSpacing(15)
+        self.leftGraphsVerticalLayout.setObjectName(u"leftGraphsVerticalLayout")
+        self.labelTickers = QLabel(self.frame_graphs)
+        self.labelTickers.setObjectName(u"labelTickers")
+        self.labelTickers.setStyleSheet(u"font: 500 12pt \"Segoe UI\";")
 
-        self.verticalLayout_21.addWidget(self.label)
+        self.leftGraphsVerticalLayout.addWidget(self.labelTickers)
+
+        self.graphsList = QListWidget(self.frame_graphs)
+        self.graphsList.setObjectName(u"graphsList")
+        sizePolicy6.setHeightForWidth(self.graphsList.sizePolicy().hasHeightForWidth())
+        self.graphsList.setSizePolicy(sizePolicy6)
+        self.graphsList.setMinimumSize(QSize(150, 0))
+        self.graphsList.setMaximumSize(QSize(16777215, 16777215))
+        self.graphsList.setStyleSheet(u"font: 700 16pt \"Segoe UI\";")
+
+        self.leftGraphsVerticalLayout.addWidget(self.graphsList)
+
+
+        self.graphsHorizontalLayout.addLayout(self.leftGraphsVerticalLayout)
+
+        self.graphsVerticalLayout = QVBoxLayout()
+        self.graphsVerticalLayout.setSpacing(70)
+        self.graphsVerticalLayout.setObjectName(u"graphsVerticalLayout")
+        self.graphsVerticalLayout.setContentsMargins(30, 120, 30, 170)
+        self.showDefaultGraphButton = QPushButton(self.frame_graphs)
+        self.showDefaultGraphButton.setObjectName(u"showDefaultGraphButton")
+        self.showDefaultGraphButton.setMinimumSize(QSize(300, 50))
+        self.showDefaultGraphButton.setMaximumSize(QSize(300, 50))
+        self.showDefaultGraphButton.setCursor(QCursor(Qt.PointingHandCursor))
+
+        self.graphsVerticalLayout.addWidget(self.showDefaultGraphButton)
+
+        self.showLogarithmicGraphButton = QPushButton(self.frame_graphs)
+        self.showLogarithmicGraphButton.setObjectName(u"showLogarithmicGraphButton")
+        self.showLogarithmicGraphButton.setMinimumSize(QSize(300, 50))
+        self.showLogarithmicGraphButton.setMaximumSize(QSize(300, 50))
+        self.showLogarithmicGraphButton.setCursor(QCursor(Qt.PointingHandCursor))
+
+        self.graphsVerticalLayout.addWidget(self.showLogarithmicGraphButton)
+
+        self.showBetaDistributionGraphButton = QPushButton(self.frame_graphs)
+        self.showBetaDistributionGraphButton.setObjectName(u"showBetaDistributionGraphButton")
+        self.showBetaDistributionGraphButton.setMinimumSize(QSize(300, 50))
+        self.showBetaDistributionGraphButton.setMaximumSize(QSize(300, 50))
+        self.showBetaDistributionGraphButton.setCursor(QCursor(Qt.PointingHandCursor))
+
+        self.graphsVerticalLayout.addWidget(self.showBetaDistributionGraphButton)
+
+        self.saveSelectedGraphButton = QPushButton(self.frame_graphs)
+        self.saveSelectedGraphButton.setObjectName(u"saveSelectedGraphButton")
+        self.saveSelectedGraphButton.setMinimumSize(QSize(300, 50))
+        self.saveSelectedGraphButton.setMaximumSize(QSize(300, 50))
+        self.saveSelectedGraphButton.setCursor(QCursor(Qt.PointingHandCursor))
+
+        self.graphsVerticalLayout.addWidget(self.saveSelectedGraphButton)
+
+        self.saveAllGraphsButton = QPushButton(self.frame_graphs)
+        self.saveAllGraphsButton.setObjectName(u"saveAllGraphsButton")
+        self.saveAllGraphsButton.setMinimumSize(QSize(300, 50))
+        self.saveAllGraphsButton.setMaximumSize(QSize(300, 50))
+        self.saveAllGraphsButton.setCursor(QCursor(Qt.PointingHandCursor))
+
+        self.graphsVerticalLayout.addWidget(self.saveAllGraphsButton)
+
+
+        self.graphsHorizontalLayout.addLayout(self.graphsVerticalLayout)
+
+
+        self.verticalLayout_24.addLayout(self.graphsHorizontalLayout)
+
+
+        self.verticalLayout_21.addWidget(self.frame_graphs)
 
         self.stackedWidget.addWidget(self.graphs)
         self.recommended = QWidget()
@@ -1732,7 +1814,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1860,7 +1942,12 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"Line", None));
         self.tableWidget.setSortingEnabled(__sortingEnabled)
 
-        self.label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.labelTickers.setText(QCoreApplication.translate("MainWindow", u"TICKERS", None))
+        self.showDefaultGraphButton.setText(QCoreApplication.translate("MainWindow", u"Show Default graph", None))
+        self.showLogarithmicGraphButton.setText(QCoreApplication.translate("MainWindow", u"Show Logarithmic graph", None))
+        self.showBetaDistributionGraphButton.setText(QCoreApplication.translate("MainWindow", u"Show Beta Distribution graph", None))
+        self.saveSelectedGraphButton.setText(QCoreApplication.translate("MainWindow", u"Save graphs for Selected Ticker", None))
+        self.saveAllGraphsButton.setText(QCoreApplication.translate("MainWindow", u"Save graphs for All Tickers", None))
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))

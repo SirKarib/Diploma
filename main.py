@@ -114,6 +114,13 @@ class MainWindow(QMainWindow):
         widgets.trackAllButton.clicked.connect(self.buttonClick)
         widgets.untrackAllButton.clicked.connect(self.buttonClick)
 
+        # GRAPHS PAGE BUTTONS
+        # widgets.showDefaultGraphButton.clicked.connect(self.buttonClick)
+        # widgets.showLogarithmicGraphButton.clicked.connect(self.buttonClick)
+        # widgets.showBetaDistributionGraphButton.clicked.connect(self.buttonClick)
+        # widgets.saveSelectedGraphButton.clicked.connect(self.buttonClick)
+        # widgets.saveAllGraphsButton.clicked.connect(self.buttonClick)
+
         # EXTRA LEFT BOX
         def openCloseLeftBox():
             UIFunctions.toggleLeftBox(self, True)
