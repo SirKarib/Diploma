@@ -1,6 +1,7 @@
 import os
 import sys
 import platform
+import random
 
 from PySide6 import QtCore, QtGui, QtWidgets
 from PySide6.QtCore import Slot, Qt
@@ -21,7 +22,8 @@ from widgets import *
 
 import pandas as pd
 import matplotlib
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT
 from matplotlib.figure import Figure
 
 matplotlib.use('Qt5Agg')
@@ -33,43 +35,65 @@ os.environ["QT_FONT_DPI"] = "96"  # FIX Problem for High DPI and Scale above 100
 widgets = None
 
 
-class MplCanvas(FigureCanvasQTAgg):
+class Matplotlib(QDialog):
+    def __init__(self, parent=None):
+        super(Matplotlib, self).__init__(parent)
 
-    def __init__(self, parent=None, width=5, height=4, dpi=100):
-        fig = Figure(figsize=(width, height), dpi=dpi)
-        self.axes = fig.add_subplot(111)
-        super(MplCanvas, self).__init__(fig)
+        # a figure instance to plot on
+        self.figure = plt.figure()
+
+        # this is the Canvas Widget that
+        # displays the 'figure' it takes the
+        # 'figure' instance as a parameter to __init__
+        self.canvas = FigureCanvasQTAgg(self.figure)
+
+        # this is the Navigation widget
+        # it takes the Canvas widget and a parent
+        self.toolbar = NavigationToolbar2QT(self.canvas, self)
+
+        # creating a Vertical Box layout
+        layout = QVBoxLayout()
+
+        # adding toolbar to the layout
+        layout.addWidget(self.toolbar)
+
+        # adding canvas to the layout
+        layout.addWidget(self.canvas)
+
+        # setting layout to the main window
+        self.setLayout(layout)
+
+        self.plot()
+
+    # function for draw graph
+    def plot(self):
+        # random data
+        data = [random.random() for i in range(10)]
+
+        # clearing old figure
+        self.figure.clear()
+
+        # create an axis
+        ax = self.figure.add_subplot(111)
+
+        # plot data
+        ax.plot(data, '*-')
+
+        # refresh canvas
+        self.canvas.draw()
 
 
 class MainWindow(QMainWindow):
-    def __init__(self, *args, **kwargs):
-        super(MainWindow, self).__init__(*args, **kwargs)
-        # QMainWindow.__init__(self)
-
-        # Create the matplotlib FigureCanvas object,
-        # which defines a single set of axes as self.axes.
-        # sc = MplCanvas(self, width=5, height=4, dpi=100)
-        # sc.axes.plot([0,1,2,3,4], [10,1,20,3,40])
-
-        # self.vertical_layout = QVBoxLayout()
-        #
-        # self.widget_matplotlib = QWidget()
-        # self.widget_matplotlib.set_layout(self.vertical_layout)
-
-        # Instead of calling .setCentralWidget(),
-        # we call it by its snake-case name...
-        # self.set_central_widget(self.widget_matplotlib)
-
-        # self.setCentralWidget(sc)
-
+    def __init__(self):
         # SET AS GLOBAL WIDGETS
         # ///////////////////////////////////////////////////////////////
+        super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         global widgets
         widgets = self.ui
 
-        # widget_matplotlib = self.ui.widget
+        self.matplotlib_graph = Matplotlib(self)
 
         # USE CUSTOM TITLE BAR | USE AS "False" FOR MAC OR LINUX
         Settings.ENABLE_CUSTOM_TITLE_BAR = True
@@ -115,11 +139,11 @@ class MainWindow(QMainWindow):
         widgets.untrackAllButton.clicked.connect(self.buttonClick)
 
         # GRAPHS PAGE BUTTONS
-        # widgets.showDefaultGraphButton.clicked.connect(self.buttonClick)
-        # widgets.showLogarithmicGraphButton.clicked.connect(self.buttonClick)
-        # widgets.showBetaDistributionGraphButton.clicked.connect(self.buttonClick)
-        # widgets.saveSelectedGraphButton.clicked.connect(self.buttonClick)
-        # widgets.saveAllGraphsButton.clicked.connect(self.buttonClick)
+        widgets.showDefaultGraphButton.clicked.connect(self.buttonClick)
+        widgets.showLogarithmicGraphButton.clicked.connect(self.buttonClick)
+        widgets.showBetaDistributionGraphButton.clicked.connect(self.buttonClick)
+        widgets.saveSelectedGraphButton.clicked.connect(self.buttonClick)
+        widgets.saveAllGraphsButton.clicked.connect(self.buttonClick)
 
         # EXTRA LEFT BOX
         def openCloseLeftBox():
@@ -262,6 +286,10 @@ class MainWindow(QMainWindow):
                 widgets.importedTickersListWidget.addItem(ticker)
             widgets.selectedTickersListWidget.clear()
 
+        # GRAPHS PAGE BUTTONS
+        if btnName == "showDefaultGraphButton":
+            self.matplotlib_graph.show()
+
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
 
@@ -279,7 +307,6 @@ class MainWindow(QMainWindow):
         if event.buttons() == Qt.LeftButton:
             print('Mouse click: LEFT CLICK')
         if event.buttons() == Qt.RightButton:
-            self.load_data()
             print('Mouse click: RIGHT CLICK')
 
 
