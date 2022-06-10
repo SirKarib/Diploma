@@ -38,6 +38,7 @@ widgets = None
 class Matplotlib(QDialog):
     def __init__(self, parent=None):
         super(Matplotlib, self).__init__(parent)
+        self.setWindowTitle("Graph")
 
         # a figure instance to plot on
         self.figure = plt.figure()
@@ -289,6 +290,18 @@ class MainWindow(QMainWindow):
         # GRAPHS PAGE BUTTONS
         if btnName == "showDefaultGraphButton":
             self.matplotlib_graph.show()
+
+        if btnName == "showLogarithmicGraphButton":
+            self.matplotlib_graph.show()
+
+        if btnName == "showBetaDistributionGraphButton":
+            self.matplotlib_graph.show()
+
+        if btnName == "saveSelectedGraphButton":
+            pass
+
+        if btnName == "saveAllGraphsButton":
+            pass
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
