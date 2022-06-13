@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'maincLEuGr.ui'
+## Form generated from reading UI file 'mainLZRMUy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -1198,7 +1198,7 @@ class Ui_MainWindow(object):
         self.frame_div_select_tickers.setBaseSize(QSize(0, 0))
         self.importAndSelectTickersHorizontalLayout = QHBoxLayout(self.frame_div_select_tickers)
         self.importAndSelectTickersHorizontalLayout.setObjectName(u"importAndSelectTickersHorizontalLayout")
-        self.importAndSelectTickersHorizontalLayout.setContentsMargins(0, 10, 0, 20)
+        self.importAndSelectTickersHorizontalLayout.setContentsMargins(0, 10, 0, 10)
         self.importedTickersListLayout = QVBoxLayout()
         self.importedTickersListLayout.setObjectName(u"importedTickersListLayout")
         self.importedTickersListLayout.setContentsMargins(-1, 0, -1, 0)
@@ -1217,7 +1217,8 @@ class Ui_MainWindow(object):
         font4.setBold(True)
         font4.setItalic(False)
         self.importedTickersListWidget.setFont(font4)
-        self.importedTickersListWidget.setStyleSheet(u"font: 700 16pt \"Segoe UI\";")
+        self.importedTickersListWidget.setStyleSheet(u"font: 700 16pt \"Segoe UI\";\n"
+                                                     "border: 2px solid #343B48;")
         self.importedTickersListWidget.setSizeAdjustPolicy(QAbstractScrollArea.AdjustIgnored)
         self.importedTickersListWidget.setMovement(QListView.Static)
         self.importedTickersListWidget.setResizeMode(QListView.Fixed)
@@ -1230,7 +1231,7 @@ class Ui_MainWindow(object):
         self.buttonsForSelectVerticalLayout = QVBoxLayout()
         self.buttonsForSelectVerticalLayout.setSpacing(80)
         self.buttonsForSelectVerticalLayout.setObjectName(u"buttonsForSelectVerticalLayout")
-        self.buttonsForSelectVerticalLayout.setContentsMargins(20, 25, 20, 240)
+        self.buttonsForSelectVerticalLayout.setContentsMargins(20, 25, 20, 270)
         self.trackButton = QPushButton(self.frame_div_select_tickers)
         self.trackButton.setObjectName(u"trackButton")
         sizePolicy3.setHeightForWidth(self.trackButton.sizePolicy().hasHeightForWidth())
@@ -1292,7 +1293,8 @@ class Ui_MainWindow(object):
         self.selectedTickersListWidget.setMinimumSize(QSize(0, 80))
         self.selectedTickersListWidget.setSizeIncrement(QSize(0, 0))
         self.selectedTickersListWidget.setBaseSize(QSize(0, 0))
-        self.selectedTickersListWidget.setStyleSheet(u"font: 700 16pt \"Segoe UI\";")
+        self.selectedTickersListWidget.setStyleSheet(u"font: 700 16pt \"Segoe UI\";\n"
+                                                     "border: 2px solid #343B48;")
         self.selectedTickersListWidget.setResizeMode(QListView.Fixed)
 
         self.selectedTickersListLayout.addWidget(self.selectedTickersListWidget)
@@ -1368,7 +1370,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 218, 218))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 274, 218))
         self.scrollAreaWidgetContents_2.setStyleSheet(u" QScrollBar:vertical {\n"
                                                       "	border: none;\n"
                                                       "    background: rgb(52, 59, 72);\n"
@@ -1599,7 +1601,8 @@ class Ui_MainWindow(object):
         self.graphsList.setSizePolicy(sizePolicy7)
         self.graphsList.setMinimumSize(QSize(150, 0))
         self.graphsList.setMaximumSize(QSize(16777215, 16777215))
-        self.graphsList.setStyleSheet(u"font: 700 16pt \"Segoe UI\";")
+        self.graphsList.setStyleSheet(u"font: 700 16pt \"Segoe UI\";\n"
+                                      "border: 2px solid #343B48;")
 
         self.leftGraphsVerticalLayout.addWidget(self.graphsList)
 
@@ -1607,9 +1610,9 @@ class Ui_MainWindow(object):
         self.graphsHorizontalLayout.addLayout(self.leftGraphsVerticalLayout)
 
         self.graphsVerticalLayout = QVBoxLayout()
-        self.graphsVerticalLayout.setSpacing(70)
+        self.graphsVerticalLayout.setSpacing(30)
         self.graphsVerticalLayout.setObjectName(u"graphsVerticalLayout")
-        self.graphsVerticalLayout.setContentsMargins(30, 120, 30, 170)
+        self.graphsVerticalLayout.setContentsMargins(30, 40, 30, 200)
         self.showDefaultGraphButton = QPushButton(self.frame_graphs)
         self.showDefaultGraphButton.setObjectName(u"showDefaultGraphButton")
         self.showDefaultGraphButton.setMinimumSize(QSize(300, 50))

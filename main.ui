@@ -2255,7 +2255,7 @@ background-repeat: no-repeat;</string>
                               <number>0</number>
                              </property>
                              <property name="bottomMargin">
-                              <number>20</number>
+                              <number>10</number>
                              </property>
                              <item>
                               <layout class="QVBoxLayout" name="importedTickersListLayout">
@@ -2299,7 +2299,8 @@ background-repeat: no-repeat;</string>
                                   </font>
                                  </property>
                                  <property name="styleSheet">
-                                  <string notr="true">font: 700 16pt &quot;Segoe UI&quot;;</string>
+                                  <string notr="true">font: 700 16pt &quot;Segoe UI&quot;;
+border: 2px solid #343B48;</string>
                                  </property>
                                  <property name="sizeAdjustPolicy">
                                   <enum>QAbstractScrollArea::AdjustIgnored</enum>
@@ -2329,7 +2330,7 @@ background-repeat: no-repeat;</string>
                                 <number>20</number>
                                </property>
                                <property name="bottomMargin">
-                                <number>240</number>
+                                <number>270</number>
                                </property>
                                <item alignment="Qt::AlignHCenter">
                                 <widget class="QPushButton" name="trackButton">
@@ -2476,7 +2477,8 @@ background-position: center;</string>
                                   </size>
                                  </property>
                                  <property name="styleSheet">
-                                  <string notr="true">font: 700 16pt &quot;Segoe UI&quot;;</string>
+                                  <string notr="true">font: 700 16pt &quot;Segoe UI&quot;;
+border: 2px solid #343B48;</string>
                                  </property>
                                  <property name="resizeMode">
                                   <enum>QListView::Fixed</enum>
@@ -2592,7 +2594,7 @@ background-position: center;</string>
                                    <rect>
                                     <x>0</x>
                                     <y>0</y>
-                                    <width>218</width>
+                                    <width>274</width>
                                     <height>218</height>
                                    </rect>
                                   </property>
@@ -3201,7 +3203,8 @@ background-position: center;</string>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
-                                 <string notr="true">font: 700 16pt &quot;Segoe UI&quot;;</string>
+                                 <string notr="true">font: 700 16pt &quot;Segoe UI&quot;;
+border: 2px solid #343B48;</string>
                                 </property>
                                </widget>
                               </item>
@@ -3210,19 +3213,19 @@ background-position: center;</string>
                             <item>
                              <layout class="QVBoxLayout" name="graphsVerticalLayout">
                               <property name="spacing">
-                               <number>70</number>
+                               <number>30</number>
                               </property>
                               <property name="leftMargin">
                                <number>30</number>
                               </property>
                               <property name="topMargin">
-                               <number>120</number>
+                               <number>40</number>
                               </property>
                               <property name="rightMargin">
                                <number>30</number>
                               </property>
                               <property name="bottomMargin">
-                               <number>170</number>
+                               <number>200</number>
                               </property>
                               <item>
                                <widget class="QPushButton" name="showDefaultGraphButton">
