@@ -13,7 +13,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>800</width>
+    <width>1100</width>
     <height>680</height>
    </size>
   </property>
@@ -581,15 +581,21 @@ Button */
        </property>
        <item>
         <widget class="QFrame" name="leftMenuBg">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
-           <width>60</width>
+           <width>200</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>60</width>
+           <width>200</width>
            <height>16777215</height>
           </size>
          </property>
@@ -709,7 +715,7 @@ Button */
               </font>
              </property>
              <property name="text">
-              <string>Trading App</string>
+              <string>Анализ котировок</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -747,74 +753,6 @@ Button */
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item>
-              <widget class="QFrame" name="toggleBox">
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>45</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QVBoxLayout" name="verticalLayout_4">
-                <property name="spacing">
-                 <number>0</number>
-                </property>
-                <property name="leftMargin">
-                 <number>0</number>
-                </property>
-                <property name="topMargin">
-                 <number>0</number>
-                </property>
-                <property name="rightMargin">
-                 <number>0</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>0</number>
-                </property>
-                <item>
-                 <widget class="QPushButton" name="toggleButton">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>45</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-image: url(:/icons/images/icons/icon_menu.png);</string>
-                  </property>
-                  <property name="text">
-                   <string>Hide</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
              <item alignment="Qt::AlignTop">
               <widget class="QFrame" name="topMenu">
                <property name="frameShape">
@@ -870,7 +808,7 @@ Button */
                    <string notr="true">background-image: url(:/icons/images/icons/cil-home.png);</string>
                   </property>
                   <property name="text">
-                   <string>Home</string>
+                   <string>Главная</string>
                   </property>
                  </widget>
                 </item>
@@ -905,7 +843,7 @@ Button */
                    <string notr="true">background-image: url(:/icons/images/icons/cil-briefcase.png);</string>
                   </property>
                   <property name="text">
-                   <string>Portfolio</string>
+                   <string>Активы</string>
                   </property>
                  </widget>
                 </item>
@@ -940,7 +878,7 @@ Button */
                    <string notr="true">background-image: url(:/icons/images/icons/cil-code.png);</string>
                   </property>
                   <property name="text">
-                   <string>Processing</string>
+                   <string>Параметры</string>
                   </property>
                  </widget>
                 </item>
@@ -975,43 +913,76 @@ Button */
                    <string notr="true">background-image: url(:/icons/images/icons/cil-chart-line.png);</string>
                   </property>
                   <property name="text">
-                   <string>Recommended</string>
+                   <string>Графики</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="btn_recommended">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
+                 <widget class="QFrame" name="toggleBox">
+                  <property name="maximumSize">
                    <size>
-                    <width>0</width>
+                    <width>16777215</width>
                     <height>45</height>
                    </size>
                   </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
                   </property>
-                  <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
                   </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-image: url(:/icons/images/icons/cil-thumb-up.png)</string>
-                  </property>
-                  <property name="text">
-                   <string>Graphs</string>
-                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_4">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="btn_recommended">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-image: url(:/icons/images/icons/cil-thumb-up.png);</string>
+                     </property>
+                     <property name="text">
+                      <string>Рекомендации</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
                </layout>
@@ -1069,10 +1040,10 @@ Button */
                    <enum>Qt::LeftToRight</enum>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-image: url(:/icons/images/icons/icon_settings.png);</string>
+                   <string notr="true">background-image: url(:/icons/images/icons/cil-description.png);</string>
                   </property>
                   <property name="text">
-                   <string>Left Box</string>
+                   <string>О программе</string>
                   </property>
                  </widget>
                 </item>
@@ -1172,28 +1143,6 @@ Button */
                 <number>0</number>
                </property>
                <item row="0" column="0">
-                <widget class="QFrame" name="extraIcon">
-                 <property name="minimumSize">
-                  <size>
-                   <width>20</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>20</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::NoFrame</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="1">
                 <widget class="QLabel" name="extraLabel">
                  <property name="minimumSize">
                   <size>
@@ -1202,11 +1151,11 @@ Button */
                   </size>
                  </property>
                  <property name="text">
-                  <string>Left Box</string>
+                  <string>О программе</string>
                  </property>
                 </widget>
                </item>
-               <item row="0" column="2">
+               <item row="0" column="1">
                 <widget class="QPushButton" name="extraCloseColumnBtn">
                  <property name="minimumSize">
                   <size>
@@ -1325,12 +1274,12 @@ Button */
                    <string notr="true">background-image: url(:/icons/images/icons/cil-share-boxed.png);</string>
                   </property>
                   <property name="text">
-                   <string>Share</string>
+                   <string>Поделиться</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="btn_adjustments">
+                 <widget class="QPushButton" name="btn_creators">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1357,10 +1306,10 @@ Button */
                    <enum>Qt::LeftToRight</enum>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-image: url(:/icons/images/icons/cil-equalizer.png);</string>
+                   <string notr="true">background-image: url(:/icons/images/icons/cil-people.png);</string>
                   </property>
                   <property name="text">
-                   <string>Adjustments</string>
+                   <string>Авторы</string>
                   </property>
                  </widget>
                 </item>
@@ -1395,7 +1344,7 @@ Button */
                    <string notr="true">background-image: url(:/icons/images/icons/cil-layers.png);</string>
                   </property>
                   <property name="text">
-                   <string>More</string>
+                   <string>Справка</string>
                   </property>
                  </widget>
                 </item>
@@ -1433,14 +1382,14 @@ Button */
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff79c6;&quot;&gt;PyDracula&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;An interface created using Python and PySide (support for PyQt), and with colors based on the Dracula theme created by Zeno Rocha.&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;MIT License&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#bd93f9;&quot;&gt;Created by: Wanderson M. Pimenta&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff79c6;&quot;&gt;Convert UI&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; color:#ffffff;&quot;&gt;pyside6-uic main.ui &amp;gt; ui_main.py&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff79c6;&quot;&gt;Convert QRC&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; color:#ffffff;&quot;&gt;pyside6-rcc resources.qrc -o resources_rc.py&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:700; color:#ff79c6;&quot;&gt;CalliduStocks&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Трейдерское приложение для анализа биржевых данных, создано с помощью Python и PySide, тема оформления основана на цветах темы Dracula, созданной Zeno Rocha.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;MIT License&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; color:#bd93f9;&quot;&gt;Создатели: SirKarib &amp;amp; Alxymitr&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:700; color:#ff79c6;&quot;&gt;Справка&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Нажмите на кнопку выше чтобы посмотреть справку по пользованию программой.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:700; color:#ff79c6;&quot;&gt;Поддержка&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Свяжитесь с авторами если желаете предложить свою помощь.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
                 </item>
@@ -1554,7 +1503,7 @@ p, li { white-space: pre-wrap; }
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QSlider" name="horizontalSlider_2">
+                 <widget class="QSlider" name="themeModeSlider">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1622,7 +1571,7 @@ p, li { white-space: pre-wrap; }
                    </font>
                   </property>
                   <property name="text">
-                   <string>Dark Mode</string>
+                   <string>Тёмная тема</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1897,7 +1846,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>3</number>
+                      <number>1</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="styleSheet">
@@ -2047,7 +1996,7 @@ background-repeat: no-repeat;</string>
                                    <string notr="true"/>
                                   </property>
                                   <property name="text">
-                                   <string>IMPORT FILE WITH TICKERS</string>
+                                   <string>Загрузить файл со списком тикеров</string>
                                   </property>
                                  </widget>
                                 </item>
@@ -2080,7 +2029,7 @@ background-repeat: no-repeat;</string>
                                      <number>1</number>
                                     </property>
                                     <property name="text">
-                                     <string>Support .txt, Enter data from a new line in the Ticker-Currency format, example: BTC-USD</string>
+                                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Поддерживается .txt, каждый тикер с новой строки в формате Тикер-Валюта, пример: BTC-USD&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                     </property>
                                     <property name="alignment">
                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2102,7 +2051,7 @@ background-repeat: no-repeat;</string>
                                      <string/>
                                     </property>
                                     <property name="placeholderText">
-                                     <string>Type here</string>
+                                     <string>Введите путь к файлу</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -2128,7 +2077,7 @@ background-repeat: no-repeat;</string>
                                      <string notr="true">background-color: rgb(52, 59, 72);</string>
                                     </property>
                                     <property name="text">
-                                     <string>Open</string>
+                                     <string>Открыть</string>
                                     </property>
                                     <property name="icon">
                                      <iconset resource="resources.qrc">
@@ -2144,7 +2093,7 @@ background-repeat: no-repeat;</string>
                             </layout>
                            </widget>
                           </item>
-                          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                          <item alignment="Qt::AlignLeft">
                            <widget class="QFrame" name="frame_div_buttons_load_start">
                             <property name="sizePolicy">
                              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -2166,7 +2115,7 @@ background-repeat: no-repeat;</string>
                             </property>
                             <layout class="QHBoxLayout" name="horizontalLayout_11">
                              <property name="spacing">
-                              <number>110</number>
+                              <number>15</number>
                              </property>
                              <property name="leftMargin">
                               <number>0</number>
@@ -2180,17 +2129,17 @@ background-repeat: no-repeat;</string>
                              <property name="bottomMargin">
                               <number>0</number>
                              </property>
-                             <item alignment="Qt::AlignVCenter">
+                             <item>
                               <widget class="QPushButton" name="loadTickersFromFileButton">
                                <property name="minimumSize">
                                 <size>
-                                 <width>180</width>
+                                 <width>230</width>
                                  <height>40</height>
                                 </size>
                                </property>
                                <property name="maximumSize">
                                 <size>
-                                 <width>150</width>
+                                 <width>16777215</width>
                                  <height>16777215</height>
                                 </size>
                                </property>
@@ -2198,37 +2147,71 @@ background-repeat: no-repeat;</string>
                                 <cursorShape>PointingHandCursor</cursorShape>
                                </property>
                                <property name="text">
-                                <string>Load Tickers</string>
+                                <string>Добавить тикеры из файла</string>
                                </property>
                                <property name="icon">
                                 <iconset resource="resources.qrc">
-                                 <normaloff>:/icons/images/icons/cil-library.png</normaloff>:/icons/images/icons/cil-library.png</iconset>
+                                 <normaloff>:/icons/images/icons/cil-library-add.png</normaloff>:/icons/images/icons/cil-library-add.png</iconset>
                                </property>
                               </widget>
                              </item>
                              <item>
-                              <widget class="QPushButton" name="getDataTickersButton">
+                              <widget class="QPushButton" name="pushButton">
                                <property name="minimumSize">
                                 <size>
-                                 <width>180</width>
-                                 <height>40</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
                                  <width>150</width>
-                                 <height>16777215</height>
+                                 <height>40</height>
                                 </size>
                                </property>
                                <property name="cursor">
                                 <cursorShape>PointingHandCursor</cursorShape>
                                </property>
                                <property name="text">
-                                <string>Get Quotes Data</string>
+                                <string>Добавить тикер</string>
                                </property>
                                <property name="icon">
                                 <iconset resource="resources.qrc">
-                                 <normaloff>:/icons/images/icons/cil-cloud-download.png</normaloff>:/icons/images/icons/cil-cloud-download.png</iconset>
+                                 <normaloff>:/icons/images/icons/cil-plus.png</normaloff>:/icons/images/icons/cil-plus.png</iconset>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="pushButton_3">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>150</width>
+                                 <height>40</height>
+                                </size>
+                               </property>
+                               <property name="cursor">
+                                <cursorShape>PointingHandCursor</cursorShape>
+                               </property>
+                               <property name="text">
+                                <string>Удалить тикер</string>
+                               </property>
+                               <property name="icon">
+                                <iconset resource="resources.qrc">
+                                 <normaloff>:/icons/images/icons/icon_minimize.png</normaloff>:/icons/images/icons/icon_minimize.png</iconset>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="pushButton_2">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>140</width>
+                                 <height>40</height>
+                                </size>
+                               </property>
+                               <property name="cursor">
+                                <cursorShape>OpenHandCursor</cursorShape>
+                               </property>
+                               <property name="text">
+                                <string>Сортировать</string>
+                               </property>
+                               <property name="icon">
+                                <iconset resource="resources.qrc">
+                                 <normaloff>:/icons/images/icons/cil-loop-circular.png</normaloff>:/icons/images/icons/cil-loop-circular.png</iconset>
                                </property>
                               </widget>
                              </item>
@@ -2340,13 +2323,13 @@ background-repeat: no-repeat;</string>
                                 <number>20</number>
                                </property>
                                <property name="topMargin">
-                                <number>10</number>
+                                <number>25</number>
                                </property>
                                <property name="rightMargin">
                                 <number>20</number>
                                </property>
                                <property name="bottomMargin">
-                                <number>250</number>
+                                <number>240</number>
                                </property>
                                <item alignment="Qt::AlignHCenter">
                                 <widget class="QPushButton" name="trackButton">
@@ -2504,26 +2487,6 @@ background-position: center;</string>
                              </item>
                             </layout>
                            </widget>
-                          </item>
-                          <item>
-                           <layout class="QVBoxLayout" name="portfolioPageProgressBarLayout">
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QProgressBar" name="portfolioPageProgressBar">
-                              <property name="value">
-                               <number>24</number>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
                           </item>
                          </layout>
                         </widget>
@@ -3213,7 +3176,7 @@ background-position: center;</string>
                                  <string notr="true">font: 500 12pt &quot;Segoe UI&quot;;</string>
                                 </property>
                                 <property name="text">
-                                 <string>TICKERS</string>
+                                 <string>ТИКЕРЫ</string>
                                 </property>
                                </widget>
                               </item>
@@ -3279,7 +3242,7 @@ background-position: center;</string>
                                  <cursorShape>PointingHandCursor</cursorShape>
                                 </property>
                                 <property name="text">
-                                 <string>Show Default graph</string>
+                                 <string>Показать график без обработки</string>
                                 </property>
                                </widget>
                               </item>
@@ -3301,7 +3264,7 @@ background-position: center;</string>
                                  <cursorShape>PointingHandCursor</cursorShape>
                                 </property>
                                 <property name="text">
-                                 <string>Show Logarithmic graph</string>
+                                 <string>Показать логарифмический график</string>
                                 </property>
                                </widget>
                               </item>
@@ -3323,7 +3286,7 @@ background-position: center;</string>
                                  <cursorShape>PointingHandCursor</cursorShape>
                                 </property>
                                 <property name="text">
-                                 <string>Show Beta Distribution graph</string>
+                                 <string>Показать график Бета-распределения</string>
                                 </property>
                                </widget>
                               </item>
@@ -3345,7 +3308,7 @@ background-position: center;</string>
                                  <cursorShape>PointingHandCursor</cursorShape>
                                 </property>
                                 <property name="text">
-                                 <string>Save graphs for Selected Ticker</string>
+                                 <string>Сохранить графики для выбранного тикера</string>
                                 </property>
                                </widget>
                               </item>
@@ -3367,7 +3330,7 @@ background-position: center;</string>
                                  <cursorShape>PointingHandCursor</cursorShape>
                                 </property>
                                 <property name="text">
-                                 <string>Save graphs for All Tickers</string>
+                                 <string>Сохранить графики для всех тикеров</string>
                                 </property>
                                </widget>
                               </item>
@@ -3517,12 +3480,12 @@ background-position: center;</string>
                             <string notr="true">background-image: url(:/icons/images/icons/cil-envelope-open.png);</string>
                            </property>
                            <property name="text">
-                            <string>Message</string>
+                            <string>Сообщить о баге</string>
                            </property>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QPushButton" name="btn_print">
+                          <widget class="QPushButton" name="btn_settings_recommendations">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                              <horstretch>0</horstretch>
@@ -3549,15 +3512,15 @@ background-position: center;</string>
                             <enum>Qt::LeftToRight</enum>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">background-image: url(:/icons/images/icons/cil-print.png);</string>
+                            <string notr="true">background-image: url(:/icons/images/icons/cil-thumb-up.png);</string>
                            </property>
                            <property name="text">
-                            <string>Print</string>
+                            <string>Настроить рекомендации</string>
                            </property>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QPushButton" name="btn_logout">
+                          <widget class="QPushButton" name="btn_settings_styles">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                              <horstretch>0</horstretch>
@@ -3584,10 +3547,10 @@ background-position: center;</string>
                             <enum>Qt::LeftToRight</enum>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">background-image: url(:/icons/images/icons/cil-account-logout.png);</string>
+                            <string notr="true">background-image: url(:/icons/images/icons/cil-equalizer.png);</string>
                            </property>
                            <property name="text">
-                            <string>Logout</string>
+                            <string>Настроить оформление</string>
                            </property>
                           </widget>
                          </item>

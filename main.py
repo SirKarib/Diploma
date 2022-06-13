@@ -105,9 +105,6 @@ class MainWindow(QMainWindow):
         # APPLY TEXTS
         self.setWindowTitle(title)
 
-        # TOGGLE MENU
-        widgets.toggleButton.clicked.connect(lambda: UIFunctions.toggleMenu(self, True))
-
         # SET UI DEFINITIONS
         UIFunctions.uiDefinitions(self)
 
@@ -125,7 +122,7 @@ class MainWindow(QMainWindow):
         widgets.btn_recommended.clicked.connect(self.buttonClick)
 
         # SLIDER FOR CHANGING THEME
-        widgets.horizontalSlider_2.valueChanged.connect(self.changeTheme)
+        widgets.themeModeSlider.valueChanged.connect(self.changeTheme)
 
         # OPEN TICKERS FILE BUTTON
         widgets.importTickersFileButton.clicked.connect(self.buttonClick)
@@ -174,10 +171,11 @@ class MainWindow(QMainWindow):
 
         if value == 0:
             mode = "Dark Mode"
+            widgets.titleRightInfo.setText("Тёмная тема")  # SET TEXT DESCRIPTION
         elif value == 1:
             mode = "Light Mode"
+            widgets.titleRightInfo.setText("Светлая тема")  # SET TEXT DESCRIPTION
         UIFunctions.theme(self, mode)
-        widgets.titleRightInfo.setText(mode)  # SET TEXT DESCRIPTION
         AppFunctions.setThemeHack(self, mode)  # SET HACKS
 
     @staticmethod
